@@ -37,8 +37,10 @@
 
       <!-- Десктопная навигация -->
       <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
+        <a href="#about" class="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors duration-200">Company</a>
         <a href="#services" class="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors duration-200">Services</a>
         <a href="#why-us" class="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors duration-200">Why Us</a>
+        <a href="#reviews" class="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors duration-200">Reviews</a>
         <a href="#pricing" class="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors duration-200">Pricing</a>
         <a href="#contact" class="magnetic-btn magnetic-btn--primary text-sm">Get Started</a>
       </nav>
@@ -59,8 +61,10 @@
         <i class="ph ph-x text-2xl"></i>
       </button>
     </div>
+    <a href="#about">Company</a>
     <a href="#services">Services</a>
     <a href="#why-us">Why Us</a>
+    <a href="#reviews">Reviews</a>
     <a href="#pricing">Pricing</a>
     <a href="#contact">Contact</a>
     <div class="mt-auto pt-8">
@@ -176,6 +180,51 @@
         <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">QuantumEdge</div>
         <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">SynapseAI</div>
         <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">OmniStack</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       ABOUT US (OUR COMPANY)
+       ==================================================================== -->
+  <section id="about" class="section border-b border-[var(--color-border-subtle)] relative overflow-hidden">
+    <!-- Glow -->
+    <div class="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-[rgba(139,92,246,0.05)] blur-[120px] rounded-full -z-10"></div>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="reveal">
+        <span class="section-label">
+          <i class="ph-bold ph-buildings"></i>
+          Our Company
+        </span>
+        <h2 class="section-title">Built for <span class="gradient-text">Infinite Scale</span></h2>
+        <p class="text-[var(--color-text-secondary)] text-lg leading-relaxed mb-6">
+          At ScaleOps, we don't just answer tickets — we act as a seamless extension of your brand. Founded with the mission to provide premium, enterprise-grade BPO services, we reject the notion of "cheap offshore labor."
+        </p>
+        <p class="text-[var(--color-text-secondary)] text-lg leading-relaxed mb-8">
+          Instead, we deliver elite talent trained to represent the world's most innovative tech companies. Your customers won't know they are talking to an outsourced team; they'll only know they are receiving world-class support.
+        </p>
+        <ul class="space-y-4 mb-8">
+          <li class="flex items-center gap-3">
+            <i class="ph-bold ph-check-circle text-[var(--color-accent-primary)] text-xl"></i>
+            <span class="font-medium">Top 1% Talent Acquisition</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="ph-bold ph-check-circle text-[var(--color-accent-primary)] text-xl"></i>
+            <span class="font-medium">Rigorous QA & Security Protocols</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="ph-bold ph-check-circle text-[var(--color-accent-primary)] text-xl"></i>
+            <span class="font-medium">Silicon Valley Standards</span>
+          </li>
+        </ul>
+      </div>
+      <div class="relative reveal" data-delay="100">
+        <div class="glass-card p-8 aspect-square flex flex-col justify-center items-center text-center tilt-card">
+          <i class="ph-fill ph-rocket-launch text-7xl text-[var(--color-accent-secondary)] mb-6"></i>
+          <h3 class="text-3xl font-bold mb-2">1,000+</h3>
+          <p class="text-[var(--color-text-secondary)]">Agents deployed globally, serving millions of users securely every day.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -581,6 +630,70 @@
   </section>
 
   <!-- ====================================================================
+       REVIEWS (TESTIMONIALS)
+       ==================================================================== -->
+  <section id="reviews" class="section relative overflow-hidden bg-[rgba(255,255,255,0.01)] border-t border-[var(--color-border-subtle)]">
+    <!-- Glow -->
+    <div class="absolute bottom-0 right-0 w-[600px] h-[300px] bg-[rgba(245,158,11,0.05)] blur-[150px] rounded-full -z-10"></div>
+
+    <div class="text-center mb-16">
+      <span class="section-label reveal">
+        <i class="ph-bold ph-star"></i>
+        Real Reviews
+      </span>
+      <h2 class="section-title reveal" data-delay="50">Don't Just Take <span class="gradient-text">Our Word</span></h2>
+      <p class="section-subtitle mx-auto reveal" data-delay="100">Hear from hyper-growth startups and enterprises scaling with our support teams.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+      <!-- Review 1 -->
+      <div class="glass-card p-8 reveal flex flex-col tilt-card" data-delay="0">
+        <div class="flex gap-1 mb-6 text-[var(--color-accent-secondary)]">
+          <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+        </div>
+        <p class="text-[var(--color-text-secondary)] italic mb-8 flex-grow">"ScaleOps completely changed our approach to support. Their agents didn't just read scripts; they actually learned our complex SaaS product. Our CSAT jumped to 98% in two months."</p>
+        <div class="flex items-center gap-4 border-t border-[var(--color-border-subtle)] pt-6">
+          <img src="/assets/avatar_1_1774724842091.png" alt="Client" class="w-12 h-12 rounded-full object-cover border border-[rgba(255,255,255,0.1)]">
+          <div>
+            <p class="font-bold text-sm">Marcus V.</p>
+            <p class="text-xs text-[var(--color-text-muted)]">CEO, NexaFlow</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="glass-card p-8 reveal flex flex-col tilt-card" data-delay="100">
+        <div class="flex gap-1 mb-6 text-[var(--color-accent-secondary)]">
+          <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+        </div>
+        <p class="text-[var(--color-text-secondary)] italic mb-8 flex-grow">"We needed a team that could match our fast-paced Silicon Valley culture. The ScaleOps team in Yerevan is incredibly sharp. They handle our Tier 2 tech support flawlessly."</p>
+        <div class="flex items-center gap-4 border-t border-[var(--color-border-subtle)] pt-6">
+          <img src="/assets/avatar_2_1774724858260.png" alt="Client" class="w-12 h-12 rounded-full object-cover border border-[rgba(255,255,255,0.1)]">
+          <div>
+            <p class="font-bold text-sm">Elena S.</p>
+            <p class="text-xs text-[var(--color-text-muted)]">VP of Ops, CloudScale</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="glass-card p-8 reveal flex flex-col tilt-card" data-delay="200">
+        <div class="flex gap-1 mb-6 text-[var(--color-accent-secondary)]">
+          <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+        </div>
+        <p class="text-[var(--color-text-secondary)] italic mb-8 flex-grow">"The ultimate growth hack. Moving our outbound SDR operations to ScaleOps reduced our CAC by 40% and our pipeline has never been healthier. Truly premium B2B quality."</p>
+        <div class="flex items-center gap-4 border-t border-[var(--color-border-subtle)] pt-6">
+          <img src="/assets/avatar_3_1774724873884.png" alt="Client" class="w-12 h-12 rounded-full object-cover border border-[rgba(255,255,255,0.1)]">
+          <div>
+            <p class="font-bold text-sm">James T.</p>
+            <p class="text-xs text-[var(--color-text-muted)]">Founder, OmniStack</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
        PRICING — 3 Tiers
        ==================================================================== -->
   <section id="pricing" class="section">
@@ -825,6 +938,38 @@
   </section>
 
   <!-- ====================================================================
+       OUR OFFICE
+       ==================================================================== -->
+  <section id="office" class="section pt-0">
+    <div class="text-center mb-16">
+      <span class="section-label reveal">
+        <i class="ph-bold ph-armchair"></i>
+        Our Office
+      </span>
+      <h2 class="section-title reveal" data-delay="50">A Workspace that <span class="gradient-text">Inspires Excellence</span></h2>
+      <p class="section-subtitle mx-auto reveal" data-delay="100">Our premium delivery center in Yerevan is designed to foster focus, security, and well-being, ensuring our agents perform at their absolute best for your customers.</p>
+    </div>
+
+    <!-- Bento Photo Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-6xl mx-auto">
+      <div class="glass-card overflow-hidden h-96 group relative reveal" data-delay="0">
+        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('/assets/office_main_1774724810060.png');"></div>
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-6 z-10">
+          <p class="font-semibold text-xl mb-1">Main Operations Floor</p>
+          <p class="text-sm text-gray-300">Secure, high-tech workstations.</p>
+        </div>
+      </div>
+      <div class="glass-card overflow-hidden h-96 group relative reveal" data-delay="100">
+        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('/assets/office_lounge_1774724823623.png');"></div>
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-6 z-10">
+          <p class="font-semibold text-xl mb-1">Collaborative Lounge</p>
+          <p class="text-sm text-gray-300">Continuous learning and team alignment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
        CONTACT — Lead Form
        ==================================================================== -->
   <section id="contact" class="section">
@@ -918,8 +1063,11 @@
         <i class="ph-bold ph-lightning text-[var(--color-accent-primary)]"></i>
         <span class="font-bold">Scale<span class="gradient-text">Ops</span></span>
       </div>
-      <nav class="flex items-center gap-6 text-sm text-[var(--color-text-muted)]" aria-label="Footer navigation">
+      <nav class="flex items-center flex-wrap justify-center gap-6 text-sm text-[var(--color-text-muted)]" aria-label="Footer navigation">
+        <a href="#about" class="hover:text-[var(--color-text-secondary)] transition-colors">Company</a>
         <a href="#services" class="hover:text-[var(--color-text-secondary)] transition-colors">Services</a>
+        <a href="#office" class="hover:text-[var(--color-text-secondary)] transition-colors">Office</a>
+        <a href="#reviews" class="hover:text-[var(--color-text-secondary)] transition-colors">Reviews</a>
         <a href="#pricing" class="hover:text-[var(--color-text-secondary)] transition-colors">Pricing</a>
         <a href="#" class="hover:text-[var(--color-text-secondary)] transition-colors">Privacy Policy</a>
       </nav>

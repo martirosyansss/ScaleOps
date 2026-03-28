@@ -58,13 +58,16 @@ Progressive Feedback: Блокировка кнопки (disabled/loading spinne
 Performance Rule-set: Изображения WebP/AVIF c lazy-loading. Зарезервировать пространство для изображений/сеток для предотвращения Cumulative Layout Shift (CLS). 
 Mobile (до 768px): Изменять структуру с отключением тяжелых параллакс-эффектов для сбережения батареи устройства.
 
-4. СТРУКТУРА СТРАНИЦЫ (БЛОК ЗА БЛОКОМ)
+6. СТРУКТУРА СТРАНИЦЫ (БЛОК ЗА БЛОКОМ)
 
-Header: Sticky, Logo, Links (Services, Why Us, Pricing), Magnetic CTA с touch зоной 44px+.
+Header: Sticky, Logo, Links (Company, Services, Office, Reviews, Pricing), Magnetic CTA с touch зоной 44px+.
 Hero Section: Gradient Text, Subtitle (line-height 1.5), 2 CTAs, Glow Orbs Background.
 Social Proof: Marquee с SVG-логотипами (серого цвета для контрастного фона).
+About Us (Our Company): Mission, scale, and B2B positioning values.
 Services (Bento Grid): Hover Spotlight, 3D Tilt (на desktop). 
+Our Office: Premium photo gallery of the delivery center in Yerevan (Bento Grid format).
 Advantage Table: Внятное сравнение с правильным отступом. 
+Testimonials (Real Reviews): Real client feedback in glassmorphism cards.
 Pricing: 3 tiers, Growth Highlight (Glow Border). 
 Contact Form: Валидируемая Lead Form (Proper labels, Error handling).
 Footer: Навигация, Copyright, Privacy.
