@@ -1,0 +1,70 @@
+Полное Техническое Задание (ТЗ): Premium Landing Page для BPO-агентства (UI/UX Pro Max Edition)
+
+1. Общая информация о проекте
+Название проекта: Elevate BPO (премиальный аутсорсинг: Customer Support & Sales).
+Цель: Создать высококонверсионный, визуально дорогой Landing Page для B2B-клиентов (США, Европа).
+Позиционирование: Мы продаем элитное B2B-решение, а не дешевую рабочую силу. Уровень дизайна должен соответствовать топовым IT-продуктам Кремниевой долины (уровня Stripe, Vercel, Linear).
+Язык интерфейса: Английский (текст на сайте), русский (комментарии в коде для разработчиков).
+
+2. ЧАСТЬ 1: ДИЗАЙН И ВИЗУАЛ (СТАНДАРТЫ UI/UX PRO MAX)
+
+2.1. Визуальный стиль (Vibes)
+Направление: Dark Mode (темный фон), high-tech, минимализм.
+Сетка (Layout): Использование Bento Grid (асимметричная модульная сетка). 
+Mobile-First Constraints: Отсутствие горизонтального скролла на мобильных, max-w-7xl на десктопах. 
+Spacing System: Строгий 4pt/8pt ритм для отступов (padding/margin/gaps) во всех секциях для создания архитектурного ритма.
+
+2.2. Цветовая палитра и Accessibility
+Background: Глубокий темный Hex: #030712 (gray-950).
+Surface: Hex: #111827 (gray-900) с прозрачностью (Glassmorphism).
+Primary/Secondary: #3B82F6 (blue-500) и #8B5CF6 (violet-500).
+Quality Control (Контрастность): Основной текст к фону должен иметь ratio >= 4.5:1, вторичный минимум 3:1. Избегать "gray-on-gray" текста.
+Token-Driven: Вместо сырых цветов использовать семантические токены (theme/css vars). Применять цвет не только для декора (error, success должны дублироваться иконками).
+
+2.3. Типографика и Иконки
+Основной шрифт: Plus Jakarta Sans. Line-height строго 1.5 - 1.75 для читабельности. Base font size не менее 16px на мобильных (защита от zoom в iOS). Line length (длина строки): 65-75 символов max.
+Иконки: Только Phosphor Icons (векторный SVG). ЗАПРЕЩАЕТСЯ использование Emoji. Строгое сохранение единого stroke-width во всем проекте.
+
+2.4. Интеракции и Motion (Touch & Interaction Specs)
+Touch Targets: Абсолютно все интерактивные элементы (кнопки, иконки, ссылки) должны иметь зону клика минимум 44x44px, даже если визуальный размер меньше.
+Hover & Press States: Обязательно давать feedback на нажатие и ховер без layout shifts (изменения габаритов). Не использовать hover как единственный способ взаимодействия (важно для touch).
+Animation Timing: Микро-взаимодействия (hovers/fade) в пределах 150-300ms. Использовать ease-out или spring physics. Выходные (exit) анимации быстрее входных. Если загрузка дольше 300ms, должен быть loading state.
+3D Tilt & Magnetic Elements: Использовать CSS transforms для сохранения main-thread budget (избегать анимации width/height/left/top). 
+
+3. ЧАСТЬ 2: ЛОГИКА И ФУНКЦИОНАЛЬНОСТЬ (FRONTEND LOGIC)
+
+3.1. Технологический стек
+Разметка: HTML5. Semantic roles and attributes.
+Стилизация: Tailwind CSS v4 (самая последняя версия, настройка через @theme в CSS).
+Интерактивность: Vanilla JavaScript.
+
+3.2. Анимации и Микроинтеракции (JavaScript / CSS)
+Scroll Reveal: IntersectionObserver в JS. Анимации должны поддерживать `prefers-reduced-motion` для доступности (отключение по запросу ОС).
+Infinite Marquee: На ховере ставится на паузу для читабельности.
+Glow Effects (Orbs & Borders): Использовать z-index management, чтобы эффекты свечения не перекрывали кликабельные формы или текст.
+Hover Spotlight & Магниты: Строго не блокировать главный поток (keep per-frame tracking work under 16ms).
+
+3.3. Навигация и Мобильное меню
+Header (Шапка): Sticky. Навигация должна иметь явный active state (визуальное подтверждение текущего раздела). При открытом мобильном меню использовать scrim (затемнение фона 40-60%) и ловить фокус внутри (focus trap).
+Escape Routes: Мобильное меню должно закрываться клавишей Esc или кликом вне зоны (backdrop).
+
+3.4. Логика формы обратной связи (Lead Form UI/UX)
+Labels: Видимые labels у инпутов (placeholder-only labels ЗАПРЕЩЕНЫ).
+Валидация: Inline-validation предпочтительно on blur (когда пользователь закончил ввод), а не при каждом нажатии клавиши.
+Error States: Сообщения об ошибках должны быть рядом с полем, указывать причину и способ исправления. Ошибки должны иметь цвет с достаточным контрастом. Обязательна поддержка aria-live или role="alert" для скринридеров.
+Progressive Feedback: Блокировка кнопки (disabled/loading spinner) во время отправки, чтобы предотвратить двойной сабмит. Success state в виде toast (auto-dismiss 3-5s) или inline message.
+
+3.5. Адаптивность и Производительность
+Performance Rule-set: Изображения WebP/AVIF c lazy-loading. Зарезервировать пространство для изображений/сеток для предотвращения Cumulative Layout Shift (CLS). 
+Mobile (до 768px): Изменять структуру с отключением тяжелых параллакс-эффектов для сбережения батареи устройства.
+
+4. СТРУКТУРА СТРАНИЦЫ (БЛОК ЗА БЛОКОМ)
+
+Header: Sticky, Logo, Links (Services, Why Us, Pricing), Magnetic CTA с touch зоной 44px+.
+Hero Section: Gradient Text, Subtitle (line-height 1.5), 2 CTAs, Glow Orbs Background.
+Social Proof: Marquee с SVG-логотипами (серого цвета для контрастного фона).
+Services (Bento Grid): Hover Spotlight, 3D Tilt (на desktop). 
+Advantage Table: Внятное сравнение с правильным отступом. 
+Pricing: 3 tiers, Growth Highlight (Glow Border). 
+Contact Form: Валидируемая Lead Form (Proper labels, Error handling).
+Footer: Навигация, Copyright, Privacy.

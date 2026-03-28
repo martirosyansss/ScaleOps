@@ -1,0 +1,739 @@
+/* ==========================================================================
+   ScaleOps — Global Styles (Tailwind CSS v4 + UI/UX Pro Max)
+   Комментарии на русском для разработчиков.
+   ========================================================================== */
+
+@import "tailwindcss";
+
+/* --------------------------------------------------------------------------
+   @theme — Семантические токены дизайн-системы.
+   Все цвета, шрифты, тени, радиусы описаны здесь, а не хардкодом в HTML.
+   -------------------------------------------------------------------------- */
+@theme {
+  /* Цвета фона — тёплый тёмный, не холодный серый */
+  --color-bg-primary: #09090B;
+  --color-bg-surface: #18181B;
+
+  /* Акцентные цвета — уникальная премиум палитра */
+  --color-accent-primary: #10B981;
+  --color-accent-secondary: #F59E0B;
+  --color-accent-tertiary: #06B6D4;
+
+  /* Текст — тёплые оттенки серого */
+  --color-text-primary: #FAFAF9;
+  --color-text-secondary: #A1A1AA;
+  --color-text-muted: #71717A;
+
+  /* Границы — едва заметные тёплые */
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+  --color-border-glass: rgba(255, 255, 255, 0.10);
+
+  /* Успех / Ошибка */
+  --color-success: #10B981;
+  --color-error: #F43F5E;
+
+  /* Шрифт */
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+
+  /* Тени — тёплые, мягкие */
+  --shadow-glow-primary: 0 0 60px rgba(16, 185, 129, 0.12);
+  --shadow-glow-secondary: 0 0 60px rgba(245, 158, 11, 0.10);
+
+  /* Z-Index шкала */
+  --z-base: 0;
+  --z-dropdown: 10;
+  --z-sticky: 20;
+  --z-overlay: 40;
+  --z-modal: 100;
+  --z-toast: 1000;
+
+  /* Анимации */
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-glow: glow-rotate 4s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-soft: pulse-soft 3s ease-in-out infinite;
+}
+
+/* --------------------------------------------------------------------------
+   Базовые стили (reset + base layer)
+   -------------------------------------------------------------------------- */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    font-size: 16px;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-sans);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Жирность заголовков */
+  h1, h2, h3, h4 {
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Видимые focus-ring для клавиатурной навигации */
+  :focus-visible {
+    outline: 2px solid var(--color-accent-primary);
+    outline-offset: 2px;
+  }
+
+  /* Поддержка prefers-reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Фоновая сетка (Background Grid)
+   -------------------------------------------------------------------------- */
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, black 30%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, black 30%, transparent 100%);
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   Светящиеся сферы (Glow Orbs)
+   -------------------------------------------------------------------------- */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.15;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.glow-orb--primary {
+  background: var(--color-accent-primary);
+  width: 500px;
+  height: 500px;
+}
+
+.glow-orb--secondary {
+  background: var(--color-accent-secondary);
+  width: 400px;
+  height: 400px;
+}
+
+.glow-orb--tertiary {
+  background: var(--color-accent-tertiary);
+  width: 350px;
+  height: 350px;
+}
+
+/* --------------------------------------------------------------------------
+   Glassmorphism утилиты
+   -------------------------------------------------------------------------- */
+.glass {
+  background: rgba(24, 24, 27, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-border-glass);
+}
+
+.glass-card {
+  background: rgba(24, 24, 27, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 16px;
+  transition: border-color 0.25s ease-out, box-shadow 0.25s ease-out;
+}
+
+.glass-card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* --------------------------------------------------------------------------
+   Solid Text (formerly Gradient Text)
+   -------------------------------------------------------------------------- */
+.gradient-text {
+  color: var(--color-accent-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Hover Spotlight (Эффект фонарика на карточках)
+   -------------------------------------------------------------------------- */
+.spotlight-container {
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+}
+
+.spotlight-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    400px circle at var(--mouse-x) var(--mouse-y),
+    rgba(16, 185, 129, 0.06),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.spotlight-card:hover::before {
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Magnetic Button (стили)
+   -------------------------------------------------------------------------- */
+.magnetic-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  min-height: 48px;
+  min-width: 48px;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.25s ease-out;
+  touch-action: manipulation;
+  user-select: none;
+  border: none;
+}
+
+.magnetic-btn--primary {
+  background: var(--color-accent-primary);
+  color: #fff;
+  box-shadow: 0 4px 24px rgba(16, 185, 129, 0.2);
+}
+
+.magnetic-btn--primary:hover {
+  box-shadow: 0 8px 40px rgba(16, 185, 129, 0.3);
+}
+
+.magnetic-btn--secondary {
+  background: transparent;
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border-glass);
+}
+
+.magnetic-btn--secondary:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* --------------------------------------------------------------------------
+   Бегущая строка (Marquee)
+   -------------------------------------------------------------------------- */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  gap: 64px;
+  animation: var(--animate-marquee);
+  width: max-content;
+}
+
+.marquee-wrapper:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-logo {
+  height: 28px;
+  opacity: 0.4;
+  filter: grayscale(1) brightness(2);
+  transition: opacity 0.3s ease-out;
+  flex-shrink: 0;
+}
+
+.marquee-logo:hover {
+  opacity: 0.7;
+}
+
+/* --------------------------------------------------------------------------
+   Анимированная рамка (Glow Border) для Growth тарифа
+   -------------------------------------------------------------------------- */
+@keyframes glow-pulse {
+  0% { box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.2), 0 8px 32px rgba(16, 185, 129, 0.05); }
+  50% { box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.6), 0 8px 32px rgba(16, 185, 129, 0.15); }
+  100% { box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.2), 0 8px 32px rgba(16, 185, 129, 0.05); }
+}
+
+.glow-border {
+  position: relative;
+  z-index: 1;
+  animation: glow-pulse 4s infinite ease-in-out;
+}
+
+.glow-border::before {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   Scroll Reveal (CSS-часть — JS добавляет класс .revealed)
+   -------------------------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   Floating animation
+   -------------------------------------------------------------------------- */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.25; }
+}
+
+/* --------------------------------------------------------------------------
+   Badge (мерцающий бейдж в Hero)
+   -------------------------------------------------------------------------- */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-accent-primary);
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.hero-badge .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent-primary);
+  animation: var(--animate-pulse-soft);
+}
+
+/* --------------------------------------------------------------------------
+   Pricing Card
+   -------------------------------------------------------------------------- */
+.pricing-card {
+  padding: 32px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pricing-card .price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.pricing-card .price span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pricing-card li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+}
+
+.pricing-card li svg {
+  flex-shrink: 0;
+  color: var(--color-success);
+}
+
+/* --------------------------------------------------------------------------
+   Advantage Table
+   -------------------------------------------------------------------------- */
+.advantage-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.9375rem;
+}
+
+.advantage-table th,
+.advantage-table td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.advantage-table thead th {
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.advantage-table .highlight {
+  color: var(--color-accent-primary);
+  font-weight: 600;
+}
+
+
+
+/* --------------------------------------------------------------------------
+   Form (Lead Form)
+   -------------------------------------------------------------------------- */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 14px 16px;
+  min-height: 48px;
+  border-radius: 12px;
+  background: rgba(24, 24, 27, 0.6);
+  border: 1px solid var(--color-border-subtle);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--color-accent-primary);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.12);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.form-group .error-msg {
+  font-size: 0.8125rem;
+  color: var(--color-error);
+  display: none;
+}
+
+.form-group.has-error input,
+.form-group.has-error textarea {
+  border-color: var(--color-error);
+}
+
+.form-group.has-error .error-msg {
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   Success Toast
+   -------------------------------------------------------------------------- */
+.toast {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  z-index: var(--z-toast);
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.35s ease-out;
+  pointer-events: none;
+}
+
+.toast.visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.toast--success {
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: var(--color-success);
+}
+
+/* --------------------------------------------------------------------------
+   Мобильное меню (Overlay)
+   -------------------------------------------------------------------------- */
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(9, 9, 11, 0.8);
+  z-index: var(--z-overlay);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+}
+
+.mobile-menu-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 100%;
+  z-index: var(--z-modal);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+.mobile-menu a {
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.2s ease-out;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-menu a:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* --------------------------------------------------------------------------
+   Section Utilities
+   -------------------------------------------------------------------------- */
+.section {
+  padding: 96px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent-primary);
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+/* --------------------------------------------------------------------------
+   3D Tilt (JS добавляет CSS переменные, здесь задаём перспективу)
+   -------------------------------------------------------------------------- */
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out;
+}
+
+/* --------------------------------------------------------------------------
+   ROI Range Slider
+   -------------------------------------------------------------------------- */
+input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background: transparent;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+input[type=range]::-webkit-slider-thumb {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: var(--color-accent-primary);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -8px;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.6);
+  transition: transform 0.1s;
+}
+input[type=range]::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+/* --------------------------------------------------------------------------
+   Tech Logo Card
+   -------------------------------------------------------------------------- */
+.tech-logo-card {
+  transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1), border-color 0.2s;
+  cursor: default;
+}
+.tech-logo-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-accent-tertiary);
+}
+.tech-logo-card:hover i {
+  color: var(--color-text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Global Map
+   -------------------------------------------------------------------------- */
+.dot-map {
+  background-image: radial-gradient(rgba(255,255,255,0.4) 1px, transparent 1px);
+  background-size: 20px 20px;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0));
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0));
+}
+
+.map-hub {
+  width: 16px;
+  height: 16px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.hub-pulse {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.map-hub::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.hub-label {
+  position: absolute;
+  top: 24px;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  background: rgba(0,0,0,0.6);
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--color-border-glass);
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Responsive (Mobile-first breakpoints в Tailwind)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .section {
+    padding: 64px 16px;
+  }
+
+  .spotlight-card::before {
+    display: none;
+  }
+}

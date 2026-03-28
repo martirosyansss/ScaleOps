@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ScaleOps — Your Growth Engine</title>
+  <meta name="description" content="ScaleOps - Your growth engine. Premium customer support, sales, and operations outsourcing — reduce costs by 40% without sacrificing quality." />
+
+  <!-- Шрифт: Plus Jakarta Sans (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+
+  <!-- Иконки: Phosphor Icons (SVG) -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+
+  <!-- Точка входа JS + CSS -->
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body>
+  <!-- Сенсор скролла для sticky header -->
+  <div id="scroll-sentinel" style="height:1px;position:absolute;top:0;left:0;width:100%;"></div>
+
+  <!-- Фоновая сетка -->
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- ====================================================================
+       HEADER — Sticky Glassmorphism Navigation
+       ==================================================================== -->
+  <header id="header" class="glass fixed top-0 left-0 right-0 z-20 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <!-- Логотип -->
+      <a href="#" class="flex items-center gap-2 text-xl font-bold" aria-label="ScaleOps Home">
+        <i class="ph-bold ph-lightning text-[var(--color-accent-primary)] text-2xl"></i>
+        <span>Scale<span class="gradient-text">Ops</span></span>
+      </a>
+
+      <!-- Десктопная навигация -->
+      <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
+        <a href="#services" class="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors duration-200">Services</a>
+        <a href="#why-us" class="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors duration-200">Why Us</a>
+        <a href="#pricing" class="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors duration-200">Pricing</a>
+        <a href="#contact" class="magnetic-btn magnetic-btn--primary text-sm">Get Started</a>
+      </nav>
+
+      <!-- Гамбургер (мобильный) -->
+      <button id="mobile-menu-toggle" class="md:hidden flex items-center justify-center w-12 h-12 rounded-lg" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <i class="ph ph-list text-2xl"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Мобильное меню (Overlay + Panel) -->
+  <div id="mobile-menu-overlay" class="mobile-menu-overlay" aria-hidden="true"></div>
+  <nav id="mobile-menu" class="mobile-menu glass" aria-label="Mobile navigation">
+    <div class="flex items-center justify-between mb-6">
+      <span class="text-lg font-bold">Menu</span>
+      <button class="flex items-center justify-center w-12 h-12 rounded-lg" aria-label="Close menu" onclick="document.getElementById('mobile-menu-toggle').click()">
+        <i class="ph ph-x text-2xl"></i>
+      </button>
+    </div>
+    <a href="#services">Services</a>
+    <a href="#why-us">Why Us</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+    <div class="mt-auto pt-8">
+      <a href="#contact" class="magnetic-btn magnetic-btn--primary w-full text-center">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- ====================================================================
+       HERO SECTION
+       ==================================================================== -->
+  <section class="relative min-h-screen flex items-center pt-24 overflow-hidden">
+    <!-- Glow Orbs (параллакс, JS двигает по мыши) -->
+    <div class="glow-orb glow-orb--primary" style="top: 10%; left: 15%;" aria-hidden="true"></div>
+    <div class="glow-orb glow-orb--secondary" style="top: 30%; right: 10%;" aria-hidden="true"></div>
+    <div class="glow-orb glow-orb--tertiary" style="bottom: 20%; left: 40%;" aria-hidden="true"></div>
+
+    <div class="section text-center mx-auto relative z-10">
+      <!-- Мерцающий бейдж -->
+      <div class="hero-badge mx-auto mb-8 reveal">
+        <span class="dot" aria-hidden="true"></span>
+        Now Onboarding New Partners
+      </div>
+
+      <!-- Главный заголовок -->
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 reveal" data-delay="100" style="max-width: 900px; margin-left: auto; margin-right: auto;">
+        ScaleOps<br />
+        <span class="gradient-text">Your Growth Engine</span>
+      </h1>
+
+      <!-- Подзаголовок -->
+      <p class="text-lg md:text-xl text-[var(--color-text-secondary)] max-w-2xl mx-auto mb-10 reveal" data-delay="200" style="line-height: 1.7;">
+        Premium customer support &amp; sales outsourcing that reduces costs by 40% — without sacrificing quality, speed, or your brand reputation.
+      </p>
+
+      <!-- CTA кнопки -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 reveal" data-delay="300">
+        <a href="#contact" class="magnetic-btn magnetic-btn--primary">
+          <i class="ph-bold ph-calendar-check mr-2"></i>
+          Book a Discovery Call
+        </a>
+        <a href="#services" class="magnetic-btn magnetic-btn--secondary">
+          <i class="ph ph-arrow-down mr-2"></i>
+          Explore Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SOCIAL PROOF — Infinite Marquee
+       ==================================================================== -->
+  <section class="py-16 border-t border-b border-[var(--color-border-subtle)] overflow-hidden">
+    <p class="text-center text-sm text-[var(--color-text-muted)] mb-8 uppercase tracking-widest font-medium">Trusted by forward-thinking companies</p>
+    <div class="marquee-wrapper">
+      <div class="marquee-track">
+        <!-- Логотипы (SVG текстовые заглушки — заменить на реальные SVG) -->
+        <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">TechVenture</div>
+        <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">CloudScale</div>
+        <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">DataPrime</div>
+        <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">NexaFlow</div>
+        <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">QuantumEdge</div>
+        <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">SynapseAI</div>
+        <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">OmniStack</div>
+        <!-- Дубликат для бесшовного цикла -->
+        <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">TechVenture</div>
+        <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">CloudScale</div>
+        <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">DataPrime</div>
+        <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">NexaFlow</div>
+        <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">QuantumEdge</div>
+        <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">SynapseAI</div>
+        <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">OmniStack</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SERVICES — Bento Grid
+       ==================================================================== -->
+  <section id="services" class="section">
+    <div class="text-center mb-16">
+      <span class="section-label reveal">
+        <i class="ph-bold ph-squares-four"></i>
+        Our Services
+      </span>
+      <h2 class="section-title reveal" data-delay="50">Everything You Need to <span class="gradient-text">Scale Fast</span></h2>
+      <p class="section-subtitle mx-auto reveal" data-delay="100">End-to-end outsourcing solutions designed for high-growth companies that demand excellence.</p>
+    </div>
+
+    <!-- Bento Grid (spotlight container) -->
+    <div class="spotlight-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <!-- Карточка 1: Omnichannel Support (wide) -->
+      <div class="glass-card spotlight-card tilt-card relative p-8 md:col-span-2 reveal" data-delay="0">
+        <div class="relative z-10">
+          <div class="w-12 h-12 rounded-xl bg-[rgba(16,185,129,0.1)] flex items-center justify-center mb-6">
+            <i class="ph-bold ph-headset text-2xl text-[var(--color-accent-primary)]"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Omnichannel Customer Support</h3>
+          <p class="text-[var(--color-text-secondary)] leading-relaxed max-w-lg">24/7 support across phone, email, live chat, and social media. Fully trained agents that represent your brand with precision and empathy.</p>
+        </div>
+      </div>
+
+      <!-- Карточка 2: Appointment Setting -->
+      <div class="glass-card spotlight-card tilt-card relative p-8 reveal" data-delay="50">
+        <div class="relative z-10">
+          <div class="w-12 h-12 rounded-xl bg-[rgba(245,158,11,0.1)] flex items-center justify-center mb-6">
+            <i class="ph-bold ph-calendar-dots text-2xl text-[var(--color-accent-secondary)]"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Appointment Setting</h3>
+          <p class="text-[var(--color-text-secondary)] leading-relaxed">Qualified lead generation and scheduling that fills your pipeline with high-intent prospects ready to convert.</p>
+        </div>
+      </div>
+
+      <!-- Карточка 3: Tech Support -->
+      <div class="glass-card spotlight-card tilt-card relative p-8 reveal" data-delay="100">
+        <div class="relative z-10">
+          <div class="w-12 h-12 rounded-xl bg-[rgba(6,182,212,0.1)] flex items-center justify-center mb-6">
+            <i class="ph-bold ph-code text-2xl text-[var(--color-accent-tertiary)]"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Technical Support</h3>
+          <p class="text-[var(--color-text-secondary)] leading-relaxed">Tier 1-3 technical support with deep product knowledge. We reduce ticket resolution time by up to 60%.</p>
+        </div>
+      </div>
+
+      <!-- Карточка 4: Managed Operations (wide) -->
+      <div class="glass-card spotlight-card tilt-card relative p-8 md:col-span-2 reveal" data-delay="150">
+        <div class="relative z-10">
+          <div class="w-12 h-12 rounded-xl bg-[rgba(16,185,129,0.1)] flex items-center justify-center mb-6">
+            <i class="ph-bold ph-gear-six text-2xl text-[var(--color-accent-primary)]"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Fully Managed Operations</h3>
+          <p class="text-[var(--color-text-secondary)] leading-relaxed max-w-lg">From recruitment and training to QA and reporting — we handle the entire operational lifecycle. You focus on growth, we handle the rest.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       INTEGRATIONS ECOSYSTEM
+       ==================================================================== -->
+  <section class="py-24 border-t border-[var(--color-border-subtle)] relative overflow-hidden">
+    <!-- Glow -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-[rgba(6,182,212,0.05)] blur-[120px] rounded-full -z-10"></div>
+    
+    <div class="text-center mb-16">
+      <span class="section-label reveal">
+        <i class="ph-bold ph-plugs"></i>
+        Seamless Integrations
+      </span>
+      <h2 class="section-title reveal" data-delay="50">We plug into your <span class="gradient-text">stack</span></h2>
+      <p class="section-subtitle mx-auto reveal" data-delay="100">No migration needed. Our agents are already experts in the tools your team uses every day.</p>
+    </div>
+
+    <!-- Tech Grid -->
+    <div class="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 reveal" data-delay="200">
+      <div class="glass-card flex items-center justify-center h-24 tech-logo-card">
+        <i class="ph ph-headphones text-4xl text-[var(--color-text-secondary)] transition-colors"></i>
+        <span class="sr-only">Zendesk</span>
+      </div>
+      <div class="glass-card flex items-center justify-center h-24 tech-logo-card">
+        <i class="ph ph-chat-circle-dots text-4xl text-[var(--color-text-secondary)] transition-colors"></i>
+      </div>
+      <div class="glass-card flex items-center justify-center h-24 tech-logo-card">
+        <i class="ph ph-cloud text-4xl text-[var(--color-text-secondary)] transition-colors"></i>
+      </div>
+      <div class="glass-card flex items-center justify-center h-24 tech-logo-card">
+        <i class="ph ph-shopping-cart text-4xl text-[var(--color-text-secondary)] transition-colors"></i>
+      </div>
+      <div class="glass-card flex items-center justify-center h-24 tech-logo-card">
+        <i class="ph ph-credit-card text-4xl text-[var(--color-text-secondary)] transition-colors"></i>
+      </div>
+      <div class="glass-card flex items-center justify-center h-24 tech-logo-card">
+        <i class="ph ph-slack-logo text-4xl text-[var(--color-text-secondary)] transition-colors"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       WHY US — Advantage Table
+       ==================================================================== -->
+  <section id="why-us" class="section">
+    <div class="text-center mb-16">
+      <span class="section-label reveal">
+        <i class="ph-bold ph-chart-bar"></i>
+        Why ScaleOps
+      </span>
+      <h2 class="section-title reveal" data-delay="50">The <span class="gradient-text">ScaleOps Advantage</span></h2>
+      <p class="section-subtitle mx-auto reveal" data-delay="100">See how we compare to building and managing an in-house team.</p>
+    </div>
+
+    <div class="glass-card overflow-hidden reveal" data-delay="150">
+      <div class="overflow-x-auto">
+        <table class="advantage-table">
+          <thead>
+            <tr>
+              <th>Criteria</th>
+              <th>In-House Team</th>
+              <th>ScaleOps</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="font-medium">Launch Time</td>
+              <td class="text-[var(--color-text-secondary)]">3-6 months</td>
+              <td class="highlight flex items-center gap-2">
+                <i class="ph-bold ph-lightning text-sm"></i>
+                2 weeks
+              </td>
+            </tr>
+            <tr>
+              <td class="font-medium">Cost per Agent</td>
+              <td class="text-[var(--color-text-secondary)]">$4,500+/mo</td>
+              <td class="highlight flex items-center gap-2">
+                <i class="ph-bold ph-trend-down text-sm"></i>
+                From $1,200/mo
+              </td>
+            </tr>
+            <tr>
+              <td class="font-medium">Quality Assurance</td>
+              <td class="text-[var(--color-text-secondary)]">Self-managed</td>
+              <td class="highlight flex items-center gap-2">
+                <i class="ph-bold ph-shield-check text-sm"></i>
+                Dedicated QA Team
+              </td>
+            </tr>
+            <tr>
+              <td class="font-medium">Scalability</td>
+              <td class="text-[var(--color-text-secondary)]">Limited by HR</td>
+              <td class="highlight flex items-center gap-2">
+                <i class="ph-bold ph-arrows-out text-sm"></i>
+                Instant Scale Up/Down
+              </td>
+            </tr>
+            <tr>
+              <td class="font-medium">Training & Onboarding</td>
+              <td class="text-[var(--color-text-secondary)]">Your responsibility</td>
+              <td class="highlight flex items-center gap-2">
+                <i class="ph-bold ph-graduation-cap text-sm"></i>
+                Fully Managed
+              </td>
+            </tr>
+            <tr style="border-bottom: none;">
+              <td class="font-medium">Reporting & Analytics</td>
+              <td class="text-[var(--color-text-secondary)]">Basic / Manual</td>
+              <td class="highlight flex items-center gap-2">
+                <i class="ph-bold ph-chart-line-up text-sm"></i>
+                Real-time Dashboards
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ROI Calculator -->
+    <div class="mt-20 glass-card p-8 md:p-12 relative overflow-hidden reveal" data-delay="200">
+      <div class="absolute top-0 right-0 w-64 h-64 bg-[rgba(16,185,129,0.1)] rounded-full blur-3xl -z-10"></div>
+      <div class="text-center mb-8">
+        <h3 class="text-2xl font-bold mb-2">Calculate Your Savings</h3>
+        <p class="text-[var(--color-text-secondary)]">Move the slider to see how much you save with ScaleOps compared to an in-house US team.</p>
+      </div>
+      
+      <div class="max-w-3xl mx-auto">
+        <div class="mb-10">
+          <div class="flex justify-between items-end mb-4">
+            <span class="font-medium text-[var(--color-text-secondary)]">Number of Agents</span>
+            <span class="text-3xl font-bold text-[var(--color-accent-primary)]" id="roi-agent-count">10</span>
+          </div>
+          <input type="range" id="roi-slider" min="1" max="50" value="10" class="w-full pointer-events-auto cursor-pointer" aria-label="Number of agents">
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-2xl bg-[rgba(255,255,255,0.03)] border border-[var(--color-border-subtle)] text-center">
+            <p class="text-sm font-medium text-[var(--color-text-secondary)] uppercase tracking-wider mb-2">US In-House</p>
+            <p class="text-3xl font-semibold opacity-60" id="roi-cost-us">$45,000</p>
+            <p class="text-xs text-[var(--color-text-muted)] mt-1">per month</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-[rgba(16,185,129,0.1)] border border-[rgba(16,185,129,0.2)] text-center relative glow-border">
+            <p class="text-sm font-medium text-[var(--color-accent-primary)] uppercase tracking-wider mb-2">ScaleOps</p>
+            <p class="text-3xl font-bold text-white" id="roi-cost-bpo">$12,000</p>
+            <p class="text-xs text-[var(--color-accent-primary)] mt-1 opacity-80">per month</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-[rgba(245,158,11,0.1)] border border-[rgba(245,158,11,0.2)] text-center pt-6">
+            <p class="text-sm font-medium text-[var(--color-accent-secondary)] uppercase tracking-wider mb-2">Your Savings</p>
+            <p class="text-3xl font-bold text-white" id="roi-savings">$33,000</p>
+            <p class="text-xs text-[var(--color-accent-secondary)] mt-1 opacity-80">per month</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       IMPACT & RESULTS
+       ==================================================================== -->
+  <section class="section">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="lg:col-span-1 flex flex-col justify-center mb-8 lg:mb-0 reveal">
+        <span class="section-label">
+          <i class="ph-bold ph-trend-up"></i>
+          Proven Impact
+        </span>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Numbers that <br/><span class="gradient-text">speak volumes</span></h2>
+        <p class="text-[var(--color-text-secondary)]">We measure our success by the improvements we bring to your bottom line and customer satisfaction scores.</p>
+      </div>
+
+      <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4 spotlight-container">
+        <!-- Metric 1 -->
+        <div class="glass-card spotlight-card p-8 reveal flex flex-col justify-center tilt-card" data-delay="100">
+          <div class="text-5xl font-extrabold text-[var(--color-accent-primary)] mb-2 inline-flex items-center z-10">
+            <span class="countup" data-target="45">0</span>%
+            <i class="ph-bold ph-arrow-up-right text-2xl ml-2"></i>
+          </div>
+          <p class="font-semibold mb-1 z-10">Increase in CSAT</p>
+          <p class="text-sm text-[var(--color-text-secondary)] z-10">Average boost in Customer Satisfaction scores within 3 months.</p>
+        </div>
+        <!-- Metric 2 -->
+        <div class="glass-card spotlight-card p-8 reveal flex flex-col justify-center tilt-card" data-delay="150">
+          <div class="text-5xl font-extrabold text-[var(--color-accent-tertiary)] mb-2 inline-flex items-center z-10">
+            -<span class="countup" data-target="60">0</span>%
+            <i class="ph-bold ph-arrow-down-right text-2xl ml-2"></i>
+          </div>
+          <p class="font-semibold mb-1 z-10">First Response Time</p>
+          <p class="text-sm text-[var(--color-text-secondary)] z-10">Drastic reduction in ticket wait times.</p>
+        </div>
+        <!-- Metric 3 -->
+        <div class="glass-card spotlight-card p-8 sm:col-span-2 reveal flex flex-col justify-center relative overflow-hidden tilt-card" data-delay="200">
+          <div class="absolute right-0 bottom-0 opacity-10 pointer-events-none">
+            <i class="ph-bold ph-users-three text-9xl transform translate-x-1/4 translate-y-1/4"></i>
+          </div>
+          <div class="text-5xl font-extrabold text-[var(--color-accent-secondary)] mb-2 inline-flex items-center z-10">
+            $<span class="countup" data-target="2">0</span>M+
+          </div>
+          <p class="font-semibold mb-1 z-10">Revenue Generated</p>
+          <p class="text-sm text-[var(--color-text-secondary)] max-w-md z-10">Additional sales driven by our dedicated outbound and inbound sales agents.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       PRICING — 3 Tiers
+       ==================================================================== -->
+  <section id="pricing" class="section">
+    <div class="text-center mb-16">
+      <span class="section-label reveal">
+        <i class="ph-bold ph-tag"></i>
+        Pricing
+      </span>
+      <h2 class="section-title reveal" data-delay="50">Simple, Transparent <span class="gradient-text">Pricing</span></h2>
+      <p class="section-subtitle mx-auto reveal" data-delay="100">No hidden fees. No long-term contracts. Scale your team on your terms.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Starter -->
+      <div class="pricing-card glass-card reveal" data-delay="0">
+        <div>
+          <p class="text-sm font-semibold text-[var(--color-text-muted)] uppercase tracking-wider mb-2">Starter</p>
+          <p class="price text-[var(--color-text-primary)]">$1,200<span>/agent/mo</span></p>
+        </div>
+        <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">Perfect for startups testing the waters with outsourced support.</p>
+        <ul>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Up to 3 agents
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Email & Chat Support
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Monthly Reporting
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Basic QA
+          </li>
+        </ul>
+        <a href="#contact" class="magnetic-btn magnetic-btn--secondary w-full text-center mt-auto">Get Started</a>
+      </div>
+
+      <!-- Growth (Highlighted) -->
+      <div class="pricing-card glass-card glow-border reveal" data-delay="100">
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-sm font-semibold text-[var(--color-accent-primary)] uppercase tracking-wider mb-2">Growth</p>
+            <p class="price text-[var(--color-text-primary)]">$1,800<span>/agent/mo</span></p>
+          </div>
+          <span class="text-xs font-semibold px-3 py-1 rounded-full bg-[rgba(16,185,129,0.15)] text-[var(--color-accent-primary)]">Most Popular</span>
+        </div>
+        <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">For scaling companies that need full-stack support with guaranteed quality.</p>
+        <ul>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            5-15 agents
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Omnichannel (Phone + Chat + Email)
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Dedicated QA Manager
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Weekly Analytics Dashboard
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Custom Training Programs
+          </li>
+        </ul>
+        <a href="#contact" class="magnetic-btn magnetic-btn--primary w-full text-center mt-auto">Get Started</a>
+      </div>
+
+      <!-- Dedicated -->
+      <div class="pricing-card glass-card reveal" data-delay="200">
+        <div>
+          <p class="text-sm font-semibold text-[var(--color-text-muted)] uppercase tracking-wider mb-2">Dedicated</p>
+          <p class="price text-[var(--color-text-primary)]">Custom<span> pricing</span></p>
+        </div>
+        <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">Enterprise-grade solutions with a fully dedicated team and operations management.</p>
+        <ul>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            15+ agents
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            All channels + Custom integrations
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Dedicated Operations Manager
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Real-time Dashboards & SLA Guarantees
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            24/7 Coverage
+          </li>
+        </ul>
+        <a href="#contact" class="magnetic-btn magnetic-btn--secondary w-full text-center mt-auto">Contact Sales</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       ARMENIA OPERATIONS HUB
+       ==================================================================== -->
+  <section class="section text-center relative overflow-hidden">
+    <span class="section-label reveal">
+      <i class="ph-bold ph-map-pin"></i>
+      Operations Hub
+    </span>
+    <h2 class="section-title reveal" data-delay="50">Powered by <span class="gradient-text">Armenian Talent</span></h2>
+    <p class="section-subtitle mx-auto mb-16 reveal" data-delay="100">Our delivery center in Yerevan provides top 1% tech and language professionals, driving scalable growth for companies across the globe.</p>
+
+    <!-- Map Container -->
+    <div class="relative w-full max-w-4xl mx-auto h-[300px] sm:h-[400px] md:h-[500px] bg-[rgba(255,255,255,0.02)] border border-[var(--color-border-subtle)] rounded-3xl overflow-hidden glass reveal" data-delay="200">
+      
+      <!-- Abstract Map Background (CSS generated dots) -->
+      <div class="absolute inset-0 dot-map opacity-30"></div>
+      
+      <!-- Client Market: North America -->
+      <div class="absolute top-[40%] left-[20%] map-hub opacity-70" aria-label="North America Market">
+        <div class="hub-pulse bg-[var(--color-text-secondary)]"></div>
+        <div class="hub-label text-xs">North America</div>
+      </div>
+
+      <!-- Client Market: Europe -->
+      <div class="absolute top-[30%] left-[45%] map-hub opacity-70" aria-label="Europe Market">
+        <div class="hub-pulse bg-[var(--color-text-secondary)]"></div>
+        <div class="hub-label text-xs">Europe</div>
+      </div>
+
+      <!-- Primary Hub: Armenia -->
+      <div class="absolute top-[35%] left-[58%] map-hub scale-125 z-10" aria-label="Armenia Delivery Hub">
+        <div class="hub-pulse bg-[var(--color-accent-primary)]"></div>
+        <div class="hub-label font-bold text-[var(--color-accent-primary)]">Yerevan, Armenia<br/><span class="text-[9px] uppercase tracking-wider text-[var(--color-text-secondary)] block mt-1">Main Delivery Engine</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       CONTACT — Lead Form
+       ==================================================================== -->
+  <section id="contact" class="section">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <!-- Левая часть: текст -->
+      <div>
+        <span class="section-label reveal">
+          <i class="ph-bold ph-envelope-simple"></i>
+          Get In Touch
+        </span>
+        <h2 class="section-title reveal" data-delay="50">Let's Build Your <span class="gradient-text">Dream Team</span></h2>
+        <p class="section-subtitle reveal" data-delay="100">Book a free discovery call. We'll analyze your needs and build a custom solution — no strings attached.</p>
+
+        <div class="mt-10 space-y-6">
+          <div class="flex items-start gap-4 reveal" data-delay="150">
+            <div class="w-10 h-10 rounded-lg bg-[rgba(16,185,129,0.1)] flex items-center justify-center flex-shrink-0 mt-1">
+              <i class="ph-bold ph-clock text-lg text-[var(--color-accent-primary)]"></i>
+            </div>
+            <div>
+              <p class="font-semibold mb-1">Quick Response</p>
+              <p class="text-sm text-[var(--color-text-secondary)]">We reply within 2 business hours.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 reveal" data-delay="200">
+            <div class="w-10 h-10 rounded-lg bg-[rgba(245,158,11,0.1)] flex items-center justify-center flex-shrink-0 mt-1">
+              <i class="ph-bold ph-lock text-lg text-[var(--color-accent-secondary)]"></i>
+            </div>
+            <div>
+              <p class="font-semibold mb-1">100% Confidential</p>
+              <p class="text-sm text-[var(--color-text-secondary)]">Your information is encrypted and secure.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 reveal" data-delay="250">
+            <div class="w-10 h-10 rounded-lg bg-[rgba(6,182,212,0.1)] flex items-center justify-center flex-shrink-0 mt-1">
+              <i class="ph-bold ph-handshake text-lg text-[var(--color-accent-tertiary)]"></i>
+            </div>
+            <div>
+              <p class="font-semibold mb-1">No Commitment</p>
+              <p class="text-sm text-[var(--color-text-secondary)]">Explore our services risk-free. Cancel anytime.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Правая часть: форма -->
+      <div class="glass-card p-8 reveal" data-delay="100">
+        <form id="lead-form" novalidate>
+          <div class="space-y-5">
+            <div class="form-group">
+              <label for="form-name">Full Name <span class="text-[var(--color-error)]" aria-hidden="true">*</span></label>
+              <input type="text" id="form-name" name="name" placeholder="John Smith" required autocomplete="name" />
+              <span class="error-msg" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="form-email">Work Email <span class="text-[var(--color-error)]" aria-hidden="true">*</span></label>
+              <input type="email" id="form-email" name="email" placeholder="john@company.com" required autocomplete="email" />
+              <span class="error-msg" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="form-company">Company Name</label>
+              <input type="text" id="form-company" name="company" placeholder="Acme Inc." autocomplete="organization" />
+              <span class="error-msg" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="form-message">How can we help?</label>
+              <textarea id="form-message" name="message" rows="4" placeholder="Tell us about your project..."></textarea>
+              <span class="error-msg" role="alert" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <button type="submit" class="magnetic-btn magnetic-btn--primary w-full mt-8">
+            <span class="btn-spinner hidden mr-2" aria-hidden="true" style="display:none;">
+              <svg class="animate-spin" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" stroke-dasharray="31.4 31.4" stroke-linecap="round"/></svg>
+            </span>
+            <span class="btn-text">Book a Discovery Call</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       FOOTER
+       ==================================================================== -->
+  <footer class="border-t border-[var(--color-border-subtle)] py-12 mt-16">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-2">
+        <i class="ph-bold ph-lightning text-[var(--color-accent-primary)]"></i>
+        <span class="font-bold">Scale<span class="gradient-text">Ops</span></span>
+      </div>
+      <nav class="flex items-center gap-6 text-sm text-[var(--color-text-muted)]" aria-label="Footer navigation">
+        <a href="#services" class="hover:text-[var(--color-text-secondary)] transition-colors">Services</a>
+        <a href="#pricing" class="hover:text-[var(--color-text-secondary)] transition-colors">Pricing</a>
+        <a href="#" class="hover:text-[var(--color-text-secondary)] transition-colors">Privacy Policy</a>
+      </nav>
+      <p class="text-sm text-[var(--color-text-muted)]">&copy; 2026 ScaleOps. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Toast уведомление (успех формы) -->
+  <div id="toast" class="toast toast--success" role="status" aria-live="polite">
+    <span class="toast-text"></span>
+  </div>
+</body>
+</html>
