@@ -388,6 +388,53 @@ function initCountUp() {
 }
 
 // ==========================================================================
+// Sticky Workflow (Как это работает)
+// ==========================================================================
+function initWorkflowSteps() {
+  const steps = document.querySelectorAll('.workflow-step');
+  const visuals = document.querySelectorAll('.visual-slide');
+  if (!steps.length || !visuals.length) return;
+
+  // Initialize first step as active since it lacks opacity-100 classes by default
+  steps[0].classList.remove('opacity-40');
+  steps[0].classList.add('opacity-100');
+  const firstVisual = document.getElementById('visual-step-1');
+  if (firstVisual && !firstVisual.classList.contains('opacity-0')) {
+     firstVisual.classList.add('opacity-100');
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const targetStep = entry.target.dataset.step;
+          
+          steps.forEach(s => {
+            s.classList.remove('opacity-100');
+            s.classList.add('opacity-40');
+          });
+          entry.target.classList.remove('opacity-40');
+          entry.target.classList.add('opacity-100');
+          
+          visuals.forEach(v => {
+            v.classList.remove('opacity-100');
+            v.classList.add('opacity-0');
+          });
+          const currentVisual = document.getElementById(`visual-step-${targetStep}`);
+          if (currentVisual) {
+            currentVisual.classList.remove('opacity-0');
+            currentVisual.classList.add('opacity-100');
+          }
+        }
+      });
+    },
+    { threshold: 0.5, rootMargin: '-20% 0px -30% 0px' }
+  );
+
+  steps.forEach((el) => observer.observe(el));
+}
+
+// ==========================================================================
 // Smooth scroll для навигационных ссылок
 // ==========================================================================
 function initSmoothScroll() {
@@ -417,5 +464,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initROICalculator();
   initCountUp();
+  initWorkflowSteps();
 });
 
