@@ -21,8 +21,8 @@
 
   /* Текст — тёплые оттенки серого */
   --color-text-primary: #FAFAF9;
-  --color-text-secondary: #A1A1AA;
-  --color-text-muted: #71717A;
+  --color-text-secondary: #D4D4D8;
+  --color-text-muted: #A1A1AA;
 
   /* Границы — едва заметные тёплые */
   --color-border-subtle: rgba(255, 255, 255, 0.06);
