@@ -109,6 +109,10 @@
           Explore Services
         </a>
       </div>
+      <p class="text-[10px] uppercase font-bold tracking-widest text-[var(--color-text-muted)] mt-6 reveal delay-500 flex items-center justify-center gap-2">
+        <i class="ph-fill ph-shield-check text-[var(--color-success)] text-sm"></i>
+        14-Day No-Risk Performance Guarantee
+      </p>
 
       <!-- Dashboard Mockup (Linear/Vercel Style) -->
       <div class="hero-mockup mt-20 mx-auto relative reveal" data-delay="400" style="max-width: 960px; padding: 0 16px;">
@@ -159,28 +163,48 @@
   <!-- ====================================================================
        SOCIAL PROOF — Infinite Marquee
        ==================================================================== -->
-  <section class="py-16 border-t border-b border-[var(--color-border-subtle)] overflow-hidden">
-    <p class="text-center text-sm text-[var(--color-text-muted)] mb-8 uppercase tracking-widest font-medium">Trusted by forward-thinking companies</p>
-    <div class="marquee-wrapper">
+  <section class="py-16 border-t border-b border-[var(--color-border-subtle)] overflow-hidden bg-[rgba(255,255,255,0.01)]">
+    <p class="text-center text-[10px] text-[var(--color-text-muted)] mb-10 uppercase tracking-[0.2em] font-bold">Powering Operational Excellence For</p>
+    <div class="marquee-wrapper relative">
+      <!-- Gradient Fades -->
+      <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[var(--color-bg-primary)] to-transparent z-10"></div>
+      <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[var(--color-bg-primary)] to-transparent z-10"></div>
+      
       <div class="marquee-track">
-        <!-- Логотипы (SVG текстовые заглушки — заменить на реальные SVG) -->
-        <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">TechVenture</div>
-        <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">CloudScale</div>
-        <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">DataPrime</div>
-        <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">NexaFlow</div>
-        <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">QuantumEdge</div>
-        <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">SynapseAI</div>
-        <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">OmniStack</div>
-        <!-- Дубликат для бесшовного цикла -->
-        <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">TechVenture</div>
-        <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">CloudScale</div>
-        <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">DataPrime</div>
-        <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">NexaFlow</div>
-        <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">QuantumEdge</div>
-        <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">SynapseAI</div>
-        <div class="marquee-logo flex items-center text-xl font-bold tracking-tight">OmniStack</div>
+        <!-- Industry Clusters (Higher Trust than generic names) -->
+        <div class="marquee-logo flex items-center gap-2 text-lg font-bold tracking-tight"><i class="ph-bold ph-bank"></i> FINTECH LEADERS</div>
+        <div class="marquee-logo flex items-center gap-2 text-lg font-bold tracking-tight"><i class="ph-bold ph-circuit-ry"></i> AI STARTUPS</div>
+        <div class="marquee-logo flex items-center gap-2 text-lg font-bold tracking-tight"><i class="ph-bold ph-shopping-bag"></i> E-COMMERCE GIANTS</div>
+        <div class="marquee-logo flex items-center gap-2 text-lg font-bold tracking-tight"><i class="ph-bold ph-cloud"></i> ENTERPRISE SAAS</div>
+        <div class="marquee-logo flex items-center gap-2 text-lg font-bold tracking-tight"><i class="ph-bold ph-buildings"></i> REAL ESTATE OPS</div>
+        <div class="marquee-logo flex items-center gap-2 text-lg font-bold tracking-tight"><i class="ph-bold ph-heartbeat"></i> HEALTH TECH</div>
+        
+        <!-- Duplicates for seamless cycle -->
+        <div class="marquee-logo flex items-center gap-2 text-lg font-bold tracking-tight"><i class="ph-bold ph-bank"></i> FINTECH LEADERS</div>
+        <div class="marquee-logo flex items-center gap-2 text-lg font-bold tracking-tight"><i class="ph-bold ph-circuit-ry"></i> AI STARTUPS</div>
+        <div class="marquee-logo flex items-center gap-2 text-lg font-bold tracking-tight"><i class="ph-bold ph-shopping-bag"></i> E-COMMERCE GIANTS</div>
+        <div class="marquee-logo flex items-center gap-2 text-lg font-bold tracking-tight"><i class="ph-bold ph-cloud"></i> ENTERPRISE SAAS</div>
+        <div class="marquee-logo flex items-center gap-2 text-lg font-bold tracking-tight"><i class="ph-bold ph-buildings"></i> REAL ESTATE OPS</div>
+        <div class="marquee-logo flex items-center gap-2 text-lg font-bold tracking-tight"><i class="ph-bold ph-heartbeat"></i> HEALTH TECH</div>
       </div>
     </div>
+
+    <!-- Security & Trust Badges (Horizontal Strip) -->
+    <div class="max-w-4xl mx-auto mt-16 px-6 py-4 rounded-2xl glass flex flex-wrap items-center justify-center gap-x-12 gap-y-6 opacity-60 hover:opacity-100 transition-opacity duration-500">
+      <div class="flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-[var(--color-text-secondary)]">
+        <i class="ph-fill ph-shield-check text-lg text-[var(--color-success)]"></i>
+        SOC2 Type II Compliant
+      </div>
+      <div class="flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-[var(--color-text-secondary)]">
+        <i class="ph-fill ph-lock-key text-lg text-[var(--color-accent-tertiary)]"></i>
+        GDPR / HIPAA Ready
+      </div>
+      <div class="flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-[var(--color-text-secondary)]">
+        <i class="ph-fill ph-fingerprint text-lg text-[var(--color-accent-secondary)]"></i>
+        Biometric Security Hub
+      </div>
+    </div>
+  </section>
   <!-- ====================================================================
        SOCIAL PROOF — Infinite Marquee (already exists)
        ==================================================================== -->
@@ -238,45 +262,64 @@
   </section>
 
   <!-- ====================================================================
-       ABOUT US (OUR COMPANY)
+       ABOUT US — The Human Factor
        ==================================================================== -->
-  <section id="about" class="section border-b border-[var(--color-border-subtle)] relative overflow-hidden">
-    <!-- Glow -->
-    <div class="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-[rgba(139,92,246,0.05)] blur-[120px] rounded-full -z-10"></div>
-    
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-      <div class="reveal">
-        <span class="section-label">
-          <i class="ph-bold ph-buildings"></i>
-          Our Company
-        </span>
-        <h2 class="section-title">Built for <span class="gradient-text">Infinite Scale</span></h2>
-        <p class="text-[var(--color-text-secondary)] text-lg leading-relaxed mb-6">
-          At ScaleOps, we don't just answer tickets — we act as a seamless extension of your brand. Founded with the mission to provide premium, enterprise-grade BPO services, we reject the notion of "cheap offshore labor."
-        </p>
-        <p class="text-[var(--color-text-secondary)] text-lg leading-relaxed mb-8">
-          Instead, we deliver elite talent trained to represent the world's most innovative tech companies. Your customers won't know they are talking to an outsourced team; they'll only know they are receiving world-class support.
-        </p>
-        <ul class="space-y-4 mb-8">
-          <li class="flex items-center gap-3">
-            <i class="ph-bold ph-check-circle text-[var(--color-accent-primary)] text-xl"></i>
-            <span class="font-medium">Top 1% Talent Acquisition</span>
-          </li>
-          <li class="flex items-center gap-3">
-            <i class="ph-bold ph-check-circle text-[var(--color-accent-primary)] text-xl"></i>
-            <span class="font-medium">Rigorous QA & Security Protocols</span>
-          </li>
-          <li class="flex items-center gap-3">
-            <i class="ph-bold ph-check-circle text-[var(--color-accent-primary)] text-xl"></i>
-            <span class="font-medium">Silicon Valley Standards</span>
-          </li>
-        </ul>
-      </div>
-      <div class="relative reveal" data-delay="100">
-        <div class="glass-card p-8 aspect-square flex flex-col justify-center items-center text-center tilt-card">
-          <i class="ph-fill ph-rocket-launch text-7xl text-[var(--color-accent-secondary)] mb-6"></i>
-          <h3 class="text-3xl font-bold mb-2">1,000+</h3>
-          <p class="text-[var(--color-text-secondary)]">Agents deployed globally, serving millions of users securely every day.</p>
+  <section id="about" class="py-24 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- Text Content -->
+        <div class="reveal">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[rgba(16,185,129,0.1)] border border-[rgba(16,185,129,0.2)] text-[var(--color-accent-primary)] text-xs font-bold uppercase tracking-widest mb-6">
+            <i class="ph-bold ph-users"></i>
+            The Human Factor
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+            The Real People Who <br />
+            <span class="gradient-text">Scale Your Business</span>
+          </h2>
+          <p class="text-lg text-[var(--color-text-secondary)] mb-8 leading-relaxed">
+            At ScaleOps, we believe that great support isn't just about efficiency — it's about **empathy**. We use **AI-augmented workflows** to eliminate busywork, allowing our elite talent to focus on solving your customers' most complex problems.
+          </p>
+          <p class="text-lg text-[var(--color-text-secondary)] mb-10 leading-relaxed">
+            We've built a culture of excellence in Yerevan, attracting the top 1% of bilingual professionals who treat your brand as their own. Your customers won't just get an answer; they'll get a partner.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg glass flex items-center justify-center text-[var(--color-accent-primary)] shrink-0">
+                <i class="ph-bold ph-graduation-cap"></i>
+              </div>
+              <div>
+                <h4 class="font-bold mb-1">University-Educated</h4>
+                <p class="text-sm text-[var(--color-text-muted)]">Bilingual experts from top tiers.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg glass flex items-center justify-center text-[var(--color-accent-primary)] shrink-0">
+                <i class="ph-bold ph-heart"></i>
+              </div>
+              <div>
+                <h4 class="font-bold mb-1">True Empathy</h4>
+                <p class="text-sm text-[var(--color-text-muted)]">Trained in your brand's unique voice.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual Content (New Office Photo) -->
+        <div class="relative reveal delay-200">
+          <div class="aspect-square rounded-3xl overflow-hidden glass border border-[var(--color-border-glass)] relative z-10">
+            <img src="/maro_k_founder_portrait_1774890159023.png" alt="Maro Karapetyan, Founder of ScaleOps" class="w-full h-full object-cover" />
+          </div>
+          <!-- Decorative elements -->
+          <div class="absolute -top-10 -right-10 w-40 h-40 bg-[var(--color-accent-primary)] opacity-10 blur-[80px] rounded-full"></div>
+          <div class="absolute -bottom-10 -left-10 w-60 h-60 bg-[var(--color-accent-tertiary)] opacity-10 blur-[100px] rounded-full"></div>
+          
+          <!-- Experience Badge -->
+          <div class="absolute -bottom-6 -right-6 glass p-6 rounded-2xl border border-[var(--color-border-glass)] shadow-2xl z-20 reveal delay-500">
+            <div class="text-3xl font-bold gradient-text">100+</div>
+            <div class="text-xs uppercase tracking-widest text-[var(--color-text-muted)] font-bold">Scaling Partners</div>
+          </div>
         </div>
       </div>
     </div>
@@ -304,7 +347,10 @@
             <i class="ph-bold ph-headset text-2xl text-[var(--color-accent-primary)]"></i>
           </div>
           <h3 class="text-xl font-bold mb-3">Omnichannel Customer Support</h3>
-          <p class="text-[var(--color-text-secondary)] leading-relaxed max-w-lg">24/7 support across phone, email, live chat, and social media. Fully trained agents that represent your brand with precision and empathy.</p>
+          <p class="text-[var(--color-text-secondary)] leading-relaxed max-w-lg mb-4">24/7 support across phone, email, live chat, and social media. Fully trained agents that represent your brand with precision and empathy.</p>
+          <div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-[rgba(16,185,129,0.1)] text-[9px] font-bold text-[var(--color-accent-primary)] uppercase tracking-wider">
+            <i class="ph-bold ph-check"></i> 14-Day Guarantee Included
+          </div>
         </div>
       </div>
 
@@ -395,7 +441,7 @@
           The Workflow
         </span>
         <h2 class="section-title reveal" data-delay="50">A <span class="gradient-text">Streamlined Engine</span> for Growth</h2>
-        <p class="section-subtitle mx-auto reveal" data-delay="100">From discovery to full-scale operations in just 14 days.</p>
+        <p class="section-subtitle mx-auto reveal" data-delay="100">From discovery to full-scale operations in just 14 days. Backed by our 14-day performance guarantee.</p>
       </div>
 
       <div class="flex flex-col md:flex-row gap-12 items-start relative mt-20">
@@ -696,50 +742,180 @@
   </section>
 
   <!-- ====================================================================
-       WALL OF LOVE (Testimonials)
+       HYBRID ADVANTAGE — AI + Human Synergy
        ==================================================================== -->
-  <section class="section border-t border-[var(--color-border-subtle)] bg-[rgba(255,255,255,0.01)]">
-    <div class="text-center mb-16">
-      <span class="section-label reveal">
-        <i class="ph-bold ph-heart"></i>
-        Wall of Love
-      </span>
-      <h2 class="section-title reveal" data-delay="50">Trusted by <span class="gradient-text">Founders & Leaders</span></h2>
+  <section class="py-24 bg-[rgba(16,185,129,0.02)] border-y border-[var(--color-border-glass)]">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- Visual Content -->
+        <div class="order-2 lg:order-1 reveal">
+          <div class="rounded-3xl overflow-hidden glass border border-[var(--color-border-glass)] shadow-2xl relative">
+            <img src="/ai_human_synergy_graphic_1774891187785.png" alt="AI + Human Synergy" class="w-full h-auto" />
+            <div class="absolute inset-0 bg-gradient-to-tr from-[var(--color-bg-primary)] to-transparent opacity-20"></div>
+          </div>
+        </div>
+
+        <!-- Text Content -->
+        <div class="order-1 lg:order-2 reveal delay-200">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[rgba(5,150,105,0.1)] border border-[rgba(5,150,105,0.2)] text-[var(--color-accent-primary)] text-xs font-bold uppercase tracking-widest mb-6">
+            <i class="ph-bold ph-lightning"></i>
+            The Hybrid Advantage
+          </div>
+          <h2 class="text-4xl font-bold mb-8">AI Speed. <br /><span class="gradient-text">Human Empathy.</span></h2>
+          <p class="text-lg text-[var(--color-text-secondary)] mb-8 leading-relaxed">
+            We don't replace humans with bots. We use **Proprietary AI Stacks** to professionalize every interaction. Our agents use real-time AI assistance to ensure 100% accuracy, instant summarization, and perfect brand alignment.
+          </p>
+
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <div class="w-12 h-12 rounded-xl glass border border-[rgba(16,185,129,0.3)] flex items-center justify-center text-[var(--color-accent-primary)] shrink-0">
+                <i class="ph-bold ph-brain"></i>
+              </div>
+              <div>
+                <h4 class="font-bold mb-1">Precision Intelligence</h4>
+                <p class="text-sm text-[var(--color-text-muted)]">LLM-augmented QA ensures that every response meets your specific brand guidelines automatically.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-12 h-12 rounded-xl glass border border-[rgba(16,185,129,0.3)] flex items-center justify-center text-[var(--color-accent-primary)] shrink-0">
+                <i class="ph-bold ph-clock-counter-clockwise"></i>
+              </div>
+              <div>
+                <h4 class="font-bold mb-1">Zero-Latency Operations</h4>
+                <p class="text-sm text-[var(--color-text-muted)]">Instant AI-powered tool research reduces Handle Time by up to 40% without sacrificing quality.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
+  <!-- ====================================================================
+       ARMENIAN STRATEGIC ADVANTAGE — Why Partner with Us?
+       ==================================================================== -->
+  <section id="armenia" class="py-24 bg-[rgba(255,255,255,0.02)]">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- Visual Content (New Skyline Photo) -->
+        <div class="reveal">
+          <div class="rounded-3xl overflow-hidden border border-[var(--color-border-glass)] shadow-2xl relative group">
+            <img src="/armenia_tech_hub_yerevan_skyline_1774892306112.png" alt="Yerevan, The Silicon Mountains" class="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[var(--color-bg-primary)] to-transparent opacity-60"></div>
+            <!-- Strategic Badge -->
+            <div class="absolute bottom-8 left-8 glass p-4 rounded-xl border border-[var(--color-border-glass)]">
+               <div class="text-xs uppercase tracking-widest text-[var(--color-accent-primary)] font-bold mb-1">Regional Tech Hub</div>
+               <div class="text-xl font-bold text-white leading-tight">Yerevan, Armenia</div>
+            </div>
+          </div>
+        </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-min">
-      <div class="glass-card p-8 flex flex-col gap-6 reveal hover:border-[rgba(255,255,255,0.2)]" data-delay="0">
-        <div class="flex text-[var(--color-accent-secondary)] text-xl"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
-        <p class="text-lg leading-relaxed font-medium">"Elevate BPO completely transformed our support ops. Within a month, our backlog was zero, and our CSAT jumped to 99%. It feels like they are sitting in the same office as us."</p>
-        <div class="flex items-center gap-4 mt-auto border-t border-[var(--color-border-subtle)] pt-6">
-          <div class="w-12 h-12 rounded-full bg-[var(--color-bg-primary)] flex items-center justify-center font-bold text-lg border border-[var(--color-border-glass)]">MR</div>
-          <div>
-            <div class="font-bold">Michael Ross</div>
-            <div class="text-sm text-[var(--color-text-secondary)] font-mono">COO at FinScale</div>
+        <div class="reveal delay-200">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[rgba(16,185,129,0.1)] border border-[rgba(16,185,129,0.2)] text-[var(--color-accent-primary)] text-xs font-bold uppercase tracking-widest mb-6">
+            <i class="ph-bold ph-globe"></i>
+            The Armenian Advantage
+          </div>
+          <h2 class="text-4xl font-bold mb-6">Silicon Valley Quality, <br /><span class="gradient-text">Armenian Innovation Hub</span></h2>
+          <p class="text-[var(--color-text-secondary)] mb-8 leading-relaxed">
+            Armenia isn't just a location — it's a strategic asset. Home to global unicorns like **Picsart** and **ServiceTitan**, Yerevan offers a talent density that rivals major European hubs. By partnering with us, you aren't just outsourcing; you are integrating a high-IQ extension of your team.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="glass p-5 rounded-2xl border border-[var(--color-border-glass)]">
+              <h4 class="font-bold mb-2 flex items-center gap-2">
+                <i class="ph-bold ph-brain text-[var(--color-accent-primary)]"></i>
+                90% IQ Hub
+              </h4>
+              <p class="text-xs text-[var(--color-text-muted)]">Agents with University degrees in Tech, Linguistics, or Business.</p>
+            </div>
+            <div class="glass p-5 rounded-2xl border border-[var(--color-border-glass)]">
+              <h4 class="font-bold mb-2 flex items-center gap-2">
+                <i class="ph-bold ph-hand-heart text-[var(--color-accent-secondary)]"></i>
+                Hospitality DNA
+              </h4>
+              <p class="text-xs text-[var(--color-text-muted)]">A culture that treats every customer interaction as a personal guest.</p>
+            </div>
+            <div class="glass p-5 rounded-2xl border border-[var(--color-border-glass)]">
+              <h4 class="font-bold mb-2 flex items-center gap-2">
+                <i class="ph-bold ph-clock text-[var(--color-accent-tertiary)]"></i>
+                24/7 Coverage
+              </h4>
+              <p class="text-xs text-[var(--color-text-muted)]">Seamless operations across EU and US timezones with 0ms lag.</p>
+            </div>
+            <div class="glass p-5 rounded-2xl border border-[var(--color-border-glass)]">
+              <h4 class="font-bold mb-2 flex items-center gap-2">
+                <i class="ph-bold ph-seal-check text-[var(--color-accent-primary)]"></i>
+                EU Alignment
+              </h4>
+              <p class="text-xs text-[var(--color-text-muted)]">Close cultural and business ethics alignment with Western markets.</p>
+            </div>
           </div>
         </div>
       </div>
-      
-      <div class="glass-card p-8 flex flex-col gap-6 reveal hover:border-[rgba(255,255,255,0.2)]" data-delay="100">
-        <div class="flex text-[var(--color-accent-secondary)] text-xl"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
-        <p class="text-lg leading-relaxed font-medium">"I was skeptical about outsourcing sales, but Elevate's SDRs booked 40+ high-intent meetings in month two. The ROI is just absurd. Highly recommend their Growth tier."</p>
-        <div class="flex items-center gap-4 mt-auto border-t border-[var(--color-border-subtle)] pt-6">
-          <div class="w-12 h-12 rounded-full bg-[var(--color-bg-primary)] flex items-center justify-center font-bold text-lg border border-[var(--color-border-glass)]">SL</div>
-          <div>
-            <div class="font-bold">Sarah Lin</div>
-            <div class="text-sm text-[var(--color-text-secondary)] font-mono">VP of Revenue, Outpost</div>
-          </div>
-        </div>
+    </div>
+  </section>
+
+
+  <!-- ====================================================================
+       EXPERTISE HUB — Meet the Team Leaders
+       ==================================================================== -->
+  <section id="team" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <h2 class="text-4xl font-bold mb-4">The People Behind Your Success</h2>
+        <p class="text-[var(--color-text-secondary)] max-w-2xl mx-auto">
+          Our Yerevan center is managed by a leadership layer that bridges Silicon Valley standards with Armenian technical excellence.
+        </p>
       </div>
 
-      <div class="glass-card p-8 flex flex-col gap-6 reveal hover:border-[rgba(255,255,255,0.2)]" data-delay="200">
-        <div class="flex text-[var(--color-accent-secondary)] text-xl"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
-        <p class="text-lg leading-relaxed font-medium">"The attention to detail during the onboarding phase was incredible. They learned our technical SaaS product faster than our internal hires. True professionals."</p>
-        <div class="flex items-center gap-4 mt-auto border-t border-[var(--color-border-subtle)] pt-6">
-          <div class="w-12 h-12 rounded-full bg-[var(--color-bg-primary)] flex items-center justify-center font-bold text-lg border border-[var(--color-border-glass)]">JN</div>
-          <div>
-            <div class="font-bold">James Norton</div>
-            <div class="text-sm text-[var(--color-text-secondary)] font-mono">CTO at BuildKast</div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Lead 1: Ani -->
+        <div class="glass p-8 rounded-3xl border border-[var(--color-border-glass)] hover:border-[rgba(16,185,129,0.3)] transition-all group reveal">
+          <div class="w-24 h-24 rounded-2xl overflow-hidden mb-6 relative">
+            <img src="/ani_n_head_ops_portrait_1774890176350.png" alt="Ani Nazaryan" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[var(--color-accent-primary)] to-transparent opacity-0 group-hover:opacity-20 transition-opacity"></div>
+          </div>
+          <h4 class="text-xl font-bold mb-1">Ani Nazaryan</h4>
+          <div class="text-[var(--color-accent-primary)] text-sm font-bold uppercase tracking-wider mb-4">Head of Support Ops</div>
+          <p class="text-sm text-[var(--color-text-muted)] leading-relaxed mb-6">
+            12+ years in Ops at Tier-1 tech firms. Expert in Zendesk architecture & CSAT optimization.
+          </p>
+          <div class="flex gap-2">
+            <span class="px-2 py-1 bg-[rgba(16,185,129,0.1)] rounded text-[10px] font-bold text-[var(--color-accent-primary)]">AI Copilot Certified</span>
+            <span class="px-2 py-1 bg-[rgba(16,185,129,0.1)] rounded text-[10px] font-bold text-[var(--color-accent-primary)]">Six Sigma</span>
+          </div>
+        </div>
+
+        <!-- Lead 2: Davit -->
+        <div class="glass p-8 rounded-3xl border border-[var(--color-border-glass)] hover:border-[rgba(245,158,11,0.3)] transition-all group reveal delay-200">
+          <div class="w-24 h-24 rounded-2xl overflow-hidden mb-6 relative">
+            <img src="/davit_m_sales_director_portrait_1774890191498.png" alt="Davit Melkonian" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[var(--color-accent-secondary)] to-transparent opacity-0 group-hover:opacity-20 transition-opacity"></div>
+          </div>
+          <h4 class="text-xl font-bold mb-1">Davit Melkonian</h4>
+          <div class="text-[var(--color-accent-secondary)] text-sm font-bold uppercase tracking-wider mb-4">Director of Sales Dev</div>
+          <p class="text-sm text-[var(--color-text-muted)] leading-relaxed mb-6">
+            Built SDR engines for 3 Unicorns. Specialist in outbound automation and pipeline velocity.
+          </p>
+          <div class="flex gap-2">
+            <span class="px-2 py-1 bg-[rgba(245,158,11,0.1)] rounded text-[10px] font-bold text-[var(--color-accent-secondary)]">AI SDR Workflow</span>
+            <span class="px-2 py-1 bg-[rgba(245,158,11,0.1)] rounded text-[10px] font-bold text-[var(--color-accent-secondary)]">US Market Expert</span>
+          </div>
+        </div>
+
+        <!-- Lead 3: Lucine -->
+        <div class="glass p-8 rounded-3xl border border-[var(--color-border-glass)] hover:border-[rgba(6,182,212,0.3)] transition-all group reveal delay-400">
+          <div class="w-24 h-24 rounded-2xl overflow-hidden mb-6 relative">
+            <img src="/lucine_r_security_lead_portrait_1774890434899.png" alt="Lucine Rostamian" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[var(--color-accent-tertiary)] to-transparent opacity-0 group-hover:opacity-20 transition-opacity"></div>
+          </div>
+          <h4 class="text-xl font-bold mb-1">Lucine Rostamian</h4>
+          <div class="text-[var(--color-accent-tertiary)] text-sm font-bold uppercase tracking-wider mb-4">QA & Security Lead</div>
+          <p class="text-sm text-[var(--color-text-muted)] leading-relaxed mb-6">
+            Data security auditor with focus on GDPR/SOC2 compliance. Expert in L3 technical support.
+          </p>
+          <div class="flex gap-2">
+            <span class="px-2 py-1 bg-[rgba(6,182,212,0.1)] rounded text-[10px] font-bold text-[var(--color-accent-tertiary)]">AI-Ops Audited</span>
+            <span class="px-2 py-1 bg-[rgba(6,182,212,0.1)] rounded text-[10px] font-bold text-[var(--color-accent-tertiary)]">SQL/Python</span>
           </div>
         </div>
       </div>
@@ -747,265 +923,76 @@
   </section>
 
   <!-- ====================================================================
-       REVIEWS (TESTIMONIALS)
+       REVIEWS — The Wall of Love
        ==================================================================== -->
-  <section id="reviews" class="section relative overflow-hidden bg-[rgba(255,255,255,0.01)] border-t border-[var(--color-border-subtle)]">
-    <!-- Glow -->
-    <div class="absolute bottom-0 right-0 w-[600px] h-[300px] bg-[rgba(245,158,11,0.05)] blur-[150px] rounded-full -z-10"></div>
-
-    <div class="text-center mb-16">
-      <span class="section-label reveal">
-        <i class="ph-bold ph-star"></i>
-        Real Reviews
-      </span>
-      <h2 class="section-title reveal" data-delay="50">Don't Just Take <span class="gradient-text">Our Word</span></h2>
-      <p class="section-subtitle mx-auto reveal" data-delay="100">Hear from hyper-growth startups and enterprises scaling with our support teams.</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
-      <!-- Review 1 -->
-      <div class="glass-card p-8 reveal flex flex-col tilt-card" data-delay="0">
-        <div class="flex gap-1 mb-6 text-[var(--color-accent-secondary)]">
-          <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+  <section id="reviews" class="py-24 relative overflow-hidden bg-[rgba(255,255,255,0.01)]">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[rgba(245,158,11,0.1)] border border-[rgba(245,158,11,0.2)] text-[var(--color-accent-secondary)] text-xs font-bold uppercase tracking-widest mb-6">
+          <i class="ph-fill ph-star"></i>
+          Wall of Love
         </div>
-        <p class="text-[var(--color-text-secondary)] italic mb-8 flex-grow">"ScaleOps completely changed our approach to support. Their agents didn't just read scripts; they actually learned our complex SaaS product. Our CSAT jumped to 98% in two months."</p>
-        <div class="flex items-center gap-4 border-t border-[var(--color-border-subtle)] pt-6">
-          <img src="/assets/avatar_1_1774724842091.png" alt="Client" class="w-12 h-12 rounded-full object-cover border border-[rgba(255,255,255,0.1)]">
-          <div>
-            <p class="font-bold text-sm">Marcus V.</p>
-            <p class="text-xs text-[var(--color-text-muted)]">CEO, NexaFlow</p>
-          </div>
-        </div>
+        <h2 class="text-4xl font-bold mb-6">Trusted by <span class="gradient-text">Founders & Leaders</span></h2>
+        <p class="text-[var(--color-text-secondary)] max-w-2xl mx-auto">
+          Hear from hyper-growth startups and enterprises scaling with our dedicated Armenian teams.
+        </p>
       </div>
 
-      <!-- Review 2 -->
-      <div class="glass-card p-8 reveal flex flex-col tilt-card" data-delay="100">
-        <div class="flex gap-1 mb-6 text-[var(--color-accent-secondary)]">
-          <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
-        </div>
-        <p class="text-[var(--color-text-secondary)] italic mb-8 flex-grow">"We needed a team that could match our fast-paced Silicon Valley culture. The ScaleOps team in Yerevan is incredibly sharp. They handle our Tier 2 tech support flawlessly."</p>
-        <div class="flex items-center gap-4 border-t border-[var(--color-border-subtle)] pt-6">
-          <img src="/assets/avatar_2_1774724858260.png" alt="Client" class="w-12 h-12 rounded-full object-cover border border-[rgba(255,255,255,0.1)]">
-          <div>
-            <p class="font-bold text-sm">Elena S.</p>
-            <p class="text-xs text-[var(--color-text-muted)]">VP of Ops, CloudScale</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Review 1 -->
+        <div class="glass p-8 rounded-3xl border border-[var(--color-border-glass)] flex flex-col reveal">
+          <div class="flex gap-1 mb-6 text-[var(--color-accent-secondary)]">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <p class="text-[var(--color-text-secondary)] italic mb-8 flex-grow">
+            "ScaleOps completely changed our approach to support. Their agents didn't just read scripts; they actually learned our complex SaaS product. Our CSAT jumped to 98% in two months."
+          </p>
+          <div class="flex items-center gap-4 border-t border-[var(--color-border-subtle)] pt-6">
+            <img src="/client_marcus_v_portrait_1774890364038.png" alt="Marcus V." class="w-12 h-12 rounded-full object-cover border border-[rgba(255,255,255,0.1)]" />
+            <div>
+              <div class="font-bold text-sm">Marcus V.</div>
+              <div class="text-xs text-[var(--color-text-muted)]">CEO, NexaFlow</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Review 3 -->
-      <div class="glass-card p-8 reveal flex flex-col tilt-card" data-delay="200">
-        <div class="flex gap-1 mb-6 text-[var(--color-accent-secondary)]">
-          <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+        <!-- Review 2 -->
+        <div class="glass p-8 rounded-3xl border border-[var(--color-border-glass)] flex flex-col reveal delay-200">
+          <div class="flex gap-1 mb-6 text-[var(--color-accent-secondary)]">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <p class="text-[var(--color-text-secondary)] italic mb-8 flex-grow">
+            "We needed a team that could match our fast-paced Silicon Valley culture. The ScaleOps team in Yerevan is incredibly sharp. They handle our Tier 2 tech support flawlessly."
+          </p>
+          <div class="flex items-center gap-4 border-t border-[var(--color-border-subtle)] pt-6">
+            <img src="/client_elena_s_portrait_1774890381847.png" alt="Elena S." class="w-12 h-12 rounded-full object-cover border border-[rgba(255,255,255,0.1)]" />
+            <div>
+              <div class="font-bold text-sm">Elena S.</div>
+              <div class="text-xs text-[var(--color-text-muted)]">VP of Ops, CloudScale</div>
+            </div>
+          </div>
         </div>
-        <p class="text-[var(--color-text-secondary)] italic mb-8 flex-grow">"The ultimate growth hack. Moving our outbound SDR operations to ScaleOps reduced our CAC by 40% and our pipeline has never been healthier. Truly premium B2B quality."</p>
-        <div class="flex items-center gap-4 border-t border-[var(--color-border-subtle)] pt-6">
-          <img src="/assets/avatar_3_1774724873884.png" alt="Client" class="w-12 h-12 rounded-full object-cover border border-[rgba(255,255,255,0.1)]">
-          <div>
-            <p class="font-bold text-sm">James T.</p>
-            <p class="text-xs text-[var(--color-text-muted)]">Founder, OmniStack</p>
+
+        <!-- Review 3 -->
+        <div class="glass p-8 rounded-3xl border border-[var(--color-border-glass)] flex flex-col reveal delay-400">
+          <div class="flex gap-1 mb-6 text-[var(--color-accent-secondary)]">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <p class="text-[var(--color-text-secondary)] italic mb-8 flex-grow">
+            "The ultimate growth hack. Moving our outbound SDR operations to ScaleOps reduced our CAC by 40% and our pipeline has never been healthier. Truly premium B2B quality."
+          </p>
+          <div class="flex items-center gap-4 border-t border-[var(--color-border-subtle)] pt-6">
+            <img src="/client_james_t_portrait_1774890396367.png" alt="James T." class="w-12 h-12 rounded-full object-cover border border-[rgba(255,255,255,0.1)]" />
+            <div>
+              <div class="font-bold text-sm">James T.</div>
+              <div class="text-xs text-[var(--color-text-muted)]">Founder, OmniStack</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ====================================================================
-       PRICING — 3 Tiers
-       ==================================================================== -->
-  <section id="pricing" class="section">
-    <div class="text-center mb-16">
-      <span class="section-label reveal">
-        <i class="ph-bold ph-tag"></i>
-        Pricing
-      </span>
-      <h2 class="section-title reveal" data-delay="50">Simple, Transparent <span class="gradient-text">Pricing</span></h2>
-      <p class="section-subtitle mx-auto reveal" data-delay="100">No hidden fees. No long-term contracts. Scale your team on your terms.</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <!-- Starter -->
-      <div class="pricing-card glass-card reveal" data-delay="0">
-        <div>
-          <p class="text-sm font-semibold text-[var(--color-text-muted)] uppercase tracking-wider mb-2">Starter</p>
-          <p class="price text-[var(--color-text-primary)]">$1,200<span>/agent/mo</span></p>
-        </div>
-        <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">Perfect for startups testing the waters with outsourced support.</p>
-        <ul>
-          <li>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Up to 3 agents
-          </li>
-          <li>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Email & Chat Support
-          </li>
-          <li>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Monthly Reporting
-          </li>
-          <li>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Basic QA
-          </li>
-        </ul>
-        <a href="#contact" class="magnetic-btn magnetic-btn--secondary w-full text-center mt-auto">Get Started</a>
-      </div>
-
-      <!-- Growth (Highlighted) -->
-      <div class="pricing-card glass-card glow-border reveal" data-delay="100">
-        <div class="flex items-center justify-between">
-          <div>
-            <p class="text-sm font-semibold text-[var(--color-accent-primary)] uppercase tracking-wider mb-2">Growth</p>
-            <p class="price text-[var(--color-text-primary)]">$1,800<span>/agent/mo</span></p>
-          </div>
-          <span class="text-xs font-semibold px-3 py-1 rounded-full bg-[rgba(16,185,129,0.15)] text-[var(--color-accent-primary)]">Most Popular</span>
-        </div>
-        <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">For scaling companies that need full-stack support with guaranteed quality.</p>
-        <ul>
-          <li>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            5-15 agents
-          </li>
-          <li>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Omnichannel (Phone + Chat + Email)
-          </li>
-          <li>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Dedicated QA Manager
-          </li>
-          <li>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Weekly Analytics Dashboard
-          </li>
-          <li>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Custom Training Programs
-          </li>
-        </ul>
-        <a href="#contact" class="magnetic-btn magnetic-btn--primary w-full text-center mt-auto">Get Started</a>
-      </div>
-
-      <!-- Dedicated -->
-      <div class="pricing-card glass-card reveal" data-delay="200">
-        <div>
-          <p class="text-sm font-semibold text-[var(--color-text-muted)] uppercase tracking-wider mb-2">Dedicated</p>
-          <p class="price text-[var(--color-text-primary)]">Custom<span> pricing</span></p>
-        </div>
-        <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">Enterprise-grade solutions with a fully dedicated team and operations management.</p>
-        <ul>
-          <li>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            15+ agents
-          </li>
-          <li>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            All channels + Custom integrations
-          </li>
-          <li>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Dedicated Operations Manager
-          </li>
-          <li>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Real-time Dashboards & SLA Guarantees
-          </li>
-          <li>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            24/7 Coverage
-          </li>
-        </ul>
-        <a href="#contact" class="magnetic-btn magnetic-btn--secondary w-full text-center mt-auto">Contact Sales</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================================================================
-       ARMENIA OPERATIONS HUB
-       ==================================================================== -->
-  <section class="section text-center relative overflow-hidden">
-    <span class="section-label reveal">
-      <i class="ph-bold ph-map-pin"></i>
-      Operations Hub
-    </span>
-    <h2 class="section-title reveal" data-delay="50">Powered by <span class="gradient-text">Armenian Talent</span></h2>
-    <p class="section-subtitle mx-auto mb-16 reveal" data-delay="100">Our delivery center in Yerevan provides top 1% tech and language professionals, driving scalable growth for companies across the globe.</p>
-
-    <!-- Map Container -->
-    <div class="relative w-full max-w-4xl mx-auto h-[300px] sm:h-[400px] md:h-[500px] bg-[rgba(255,255,255,0.02)] border border-[var(--color-border-subtle)] rounded-3xl overflow-hidden glass reveal" data-delay="200">
-      
-      <!-- Abstract Map Background (CSS generated dots) -->
-      <div class="absolute inset-0 dot-map opacity-30"></div>
-      
-      <!-- Client Market: North America -->
-      <div class="absolute top-[40%] left-[20%] map-hub opacity-70" aria-label="North America Market">
-        <div class="hub-pulse bg-[var(--color-text-secondary)]"></div>
-        <div class="hub-label text-xs">North America</div>
-      </div>
-
-      <!-- Client Market: Europe -->
-      <div class="absolute top-[30%] left-[45%] map-hub opacity-70" aria-label="Europe Market">
-        <div class="hub-pulse bg-[var(--color-text-secondary)]"></div>
-        <div class="hub-label text-xs">Europe</div>
-      </div>
-
-      <!-- Primary Hub: Armenia -->
-      <div class="absolute top-[35%] left-[58%] map-hub scale-125 z-10" aria-label="Armenia Delivery Hub">
-        <div class="hub-pulse bg-[var(--color-accent-primary)]"></div>
-        <div class="hub-label font-bold text-[var(--color-accent-primary)]">Yerevan, Armenia<br/><span class="text-[9px] uppercase tracking-wider text-[var(--color-text-secondary)] block mt-1">Main Delivery Engine</span></div>
-      </div>
-    </div>
-
-    <!-- API-Style Talent Profiles -->
-    <div class="mt-24 max-w-5xl mx-auto text-left reveal" data-delay="300">
-      <h3 class="text-xl font-bold mb-8 text-center flex items-center justify-center gap-2">
-        <i class="ph-bold ph-brackets-curly text-[var(--color-text-muted)] text-2xl"></i>
-        <span>The <span class="text-white">Talent</span> Stack</span>
-      </h3>
-      
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="glass-card p-6 border-l-[3px] border-l-[var(--color-accent-primary)] hover:border-[var(--color-border-glass)] transition-all">
-          <div class="flex items-center justify-between mb-4">
-            <span class="font-mono text-xs uppercase tracking-widest text-[var(--color-accent-primary)] font-bold">type: "L2 Tech"</span>
-            <i class="ph-bold ph-shield-check text-[var(--color-success)] text-lg"></i>
-          </div>
-          <p class="font-bold text-lg mb-1">Technical Support</p>
-          <ul class="text-sm text-[var(--color-text-secondary)] mt-4 space-y-3 font-mono border-t border-[rgba(255,255,255,0.05)] pt-4">
-            <li><span class="text-white text-xs opacity-60">LANG:</span> EN Native / C2</li>
-            <li><span class="text-white text-xs opacity-60">TECH:</span> SQL, React, APIs</li>
-            <li><span class="text-white text-xs opacity-60">TOOLS:</span> Jira, Zendesk</li>
-          </ul>
-        </div>
-        
-        <div class="glass-card p-6 border-l-[3px] border-l-[var(--color-accent-secondary)] hover:border-[var(--color-border-glass)] transition-all">
-          <div class="flex items-center justify-between mb-4">
-            <span class="font-mono text-xs uppercase tracking-widest text-[var(--color-accent-secondary)] font-bold">type: "Outbound SDR"</span>
-            <i class="ph-bold ph-shield-check text-[var(--color-success)] text-lg"></i>
-          </div>
-          <p class="font-bold text-lg mb-1">Sales Dev Rep</p>
-          <ul class="text-sm text-[var(--color-text-secondary)] mt-4 space-y-3 font-mono border-t border-[rgba(255,255,255,0.05)] pt-4">
-            <li><span class="text-white text-xs opacity-60">LANG:</span> EN Native / US Accent</li>
-            <li><span class="text-white text-xs opacity-60">SKILL:</span> Cold Calling, B2B</li>
-            <li><span class="text-white text-xs opacity-60">TOOLS:</span> Salesforce, Gong</li>
-          </ul>
-        </div>
-
-        <div class="glass-card p-6 border-l-[3px] border-l-[var(--color-accent-tertiary)] hover:border-[var(--color-border-glass)] transition-all">
-          <div class="flex items-center justify-between mb-4">
-            <span class="font-mono text-xs uppercase tracking-widest text-[var(--color-accent-tertiary)] font-bold">type: "RevOps"</span>
-            <i class="ph-bold ph-shield-check text-[var(--color-success)] text-lg"></i>
-          </div>
-          <p class="font-bold text-lg mb-1">Operations Mgr</p>
-          <ul class="text-sm text-[var(--color-text-secondary)] mt-4 space-y-3 font-mono border-t border-[rgba(255,255,255,0.05)] pt-4">
-            <li><span class="text-white text-xs opacity-60">ROLE:</span> QA & Team Lead</li>
-            <li><span class="text-white text-xs opacity-60">SKILL:</span> Data Analysis, SLA</li>
-            <li><span class="text-white text-xs opacity-60">TOOLS:</span> Looker, Hubspot</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ====================================================================
        FAQ — ACCORDION
@@ -1055,32 +1042,30 @@
   </section>
 
   <!-- ====================================================================
-       OUR OFFICE
+       FOUNDER'S PROMISE
        ==================================================================== -->
-  <section id="office" class="section pt-0">
-    <div class="text-center mb-16">
-      <span class="section-label reveal">
-        <i class="ph-bold ph-armchair"></i>
-        Our Office
-      </span>
-      <h2 class="section-title reveal" data-delay="50">A Workspace that <span class="gradient-text">Inspires Excellence</span></h2>
-      <p class="section-subtitle mx-auto reveal" data-delay="100">Our premium delivery center in Yerevan is designed to foster focus, security, and well-being, ensuring our agents perform at their absolute best for your customers.</p>
-    </div>
-
-    <!-- Bento Photo Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-6xl mx-auto">
-      <div class="glass-card overflow-hidden h-96 group relative reveal" data-delay="0">
-        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('/assets/office_main_1774724810060.png');"></div>
-        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-6 z-10">
-          <p class="font-semibold text-xl mb-1">Main Operations Floor</p>
-          <p class="text-sm text-gray-300">Secure, high-tech workstations.</p>
+  <section class="py-24 relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="glass p-12 md:p-16 rounded-[40px] border border-[var(--color-border-glass)] relative reveal">
+        <div class="flex flex-col md:flex-row items-center gap-10">
+          <div class="w-32 h-32 md:w-40 md:h-40 rounded-3xl overflow-hidden glass border border-[rgba(16,185,129,0.3)] shrink-0">
+             <img src="/maro_k_founder_portrait_1774890159023.png" alt="Maro Karapetyan" class="w-full h-full object-cover" />
+          </div>
+          <div>
+            <i class="ph-fill ph-quotes text-6xl text-[var(--color-accent-primary)] opacity-20 mb-4 block"></i>
+            <p class="text-xl md:text-2xl text-white font-medium leading-relaxed mb-8 italic">
+              "Trust isn't built with promises, it's built with results. At ScaleOps, we don't just provide agents — we provide a partnership built on transparency, security, and elite performance. My promise to you is simple: your growth is our only KPI."
+            </p>
+            <div>
+              <div class="text-xl font-bold text-white">Maro Karapetyan</div>
+              <div class="text-[var(--color-accent-primary)] text-sm font-bold uppercase tracking-widest mt-1">Founder & CEO, ScaleOps Hub</div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="glass-card overflow-hidden h-96 group relative reveal" data-delay="100">
-        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('/assets/office_lounge_1774724823623.png');"></div>
-        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-6 z-10">
-          <p class="font-semibold text-xl mb-1">Collaborative Lounge</p>
-          <p class="text-sm text-gray-300">Continuous learning and team alignment.</p>
+        
+        <!-- Subtle signature effect (Text) -->
+        <div class="absolute bottom-8 right-12 opacity-10 pointer-events-none select-none italic text-4xl font-serif text-white">
+          Maro Karapetyan
         </div>
       </div>
     </div>
@@ -1089,7 +1074,7 @@
   <!-- ====================================================================
        CONTACT — Lead Form
        ==================================================================== -->
-  <section id="contact" class="section">
+  <section id="contact" class="section border-t border-[var(--color-border-subtle)]">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
       <!-- Левая часть: текст -->
       <div>
@@ -1172,23 +1157,76 @@
   </section>
 
   <!-- ====================================================================
-       FOOTER
+       ENTERPRISE FOOTER
        ==================================================================== -->
-  <footer class="border-t border-[var(--color-border-subtle)] py-12 mt-16">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-      <div class="flex items-center gap-2">
-        <i class="ph-bold ph-lightning text-[var(--color-accent-primary)]"></i>
-        <span class="font-bold">Scale<span class="gradient-text">Ops</span></span>
+  <footer class="border-t border-[var(--color-border-subtle)] pt-20 pb-10 bg-[rgba(0,0,0,0.3)]">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <!-- Brand & Address -->
+        <div class="col-span-1 md:col-span-1 lg:col-span-1">
+          <a href="#" class="flex items-center gap-2 text-xl font-bold mb-6">
+            <i class="ph-bold ph-lightning text-[var(--color-accent-primary)]"></i>
+            <span>Scale<span class="gradient-text">Ops</span></span>
+          </a>
+          <p class="text-sm text-[var(--color-text-secondary)] leading-relaxed mb-6">
+            Premium operational hub in Yerevan, Armenia. Bridging Silicon Valley excellence with elite global talent.
+          </p>
+          <div class="flex items-center gap-3">
+             <a href="#" class="w-8 h-8 rounded-lg glass flex items-center justify-center hover:text-[var(--color-accent-primary)] transition-colors"><i class="ph ph-linkedin-logo"></i></a>
+             <a href="#" class="w-8 h-8 rounded-lg glass flex items-center justify-center hover:text-[var(--color-accent-primary)] transition-colors"><i class="ph ph-x-logo"></i></a>
+             <a href="#" class="w-8 h-8 rounded-lg glass flex items-center justify-center hover:text-[var(--color-accent-primary)] transition-colors"><i class="ph ph-instagram-logo"></i></a>
+          </div>
+        </div>
+
+        <!-- Links Grid -->
+        <div class="grid grid-cols-2 gap-8 col-span-1 md:col-span-2 lg:col-span-2">
+          <div>
+            <h5 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Platform</h5>
+            <ul class="space-y-4 text-sm text-[var(--color-text-muted)]">
+              <li><a href="#problems" class="hover:text-white transition-colors">Why Now</a></li>
+              <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
+              <li><a href="#pricing" class="hover:text-white transition-colors">Pricing</a></li>
+              <li><a href="#workflow" class="hover:text-white transition-colors">Process</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Company</h5>
+            <ul class="space-y-4 text-sm text-[var(--color-text-muted)]">
+              <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+              <li><a href="#office" class="hover:text-white transition-colors">Our Hub</a></li>
+              <li><a href="#reviews" class="hover:text-white transition-colors">Success Stories</a></li>
+              <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Trust Signals Footer -->
+        <div class="col-span-1">
+          <h5 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Security</h5>
+          <div class="space-y-4">
+            <div class="flex items-center gap-2 text-xs text-[var(--color-text-secondary)]">
+              <i class="ph-bold ph-shield-check text-[var(--color-success)]"></i>
+              SOC2 Type II Compliant
+            </div>
+            <div class="flex items-center gap-2 text-xs text-[var(--color-text-secondary)]">
+              <i class="ph-bold ph-check text-[var(--color-accent-tertiary)]"></i>
+              GDPR & HIPAA Ready
+            </div>
+            <p class="text-[10px] text-[var(--color-text-muted)] mt-4">
+              All delivery nodes monitored 24/7. Data encryption at rest & in transit.
+            </p>
+          </div>
+        </div>
       </div>
-      <nav class="flex items-center flex-wrap justify-center gap-6 text-sm text-[var(--color-text-muted)]" aria-label="Footer navigation">
-        <a href="#about" class="hover:text-[var(--color-text-secondary)] transition-colors">Company</a>
-        <a href="#services" class="hover:text-[var(--color-text-secondary)] transition-colors">Services</a>
-        <a href="#office" class="hover:text-[var(--color-text-secondary)] transition-colors">Office</a>
-        <a href="#reviews" class="hover:text-[var(--color-text-secondary)] transition-colors">Reviews</a>
-        <a href="#pricing" class="hover:text-[var(--color-text-secondary)] transition-colors">Pricing</a>
-        <a href="#" class="hover:text-[var(--color-text-secondary)] transition-colors">Privacy Policy</a>
-      </nav>
-      <p class="text-sm text-[var(--color-text-muted)]">&copy; 2026 ScaleOps. All rights reserved.</p>
+
+      <div class="pt-8 border-t border-[var(--color-border-subtle)] flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-[var(--color-text-muted)]">
+        <p>&copy; 2026 ScaleOps Armenia. All rights reserved.</p>
+        <div class="flex gap-8">
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+          <a href="#" class="hover:text-white transition-colors">Cookie Settings</a>
+        </div>
+      </div>
     </div>
   </footer>
 
