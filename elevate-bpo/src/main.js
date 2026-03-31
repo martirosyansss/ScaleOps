@@ -1,5 +1,5 @@
 /**
- * ScaleOps — Vanilla JavaScript (UI/UX Pro Max Edition)
+ * OrixOps — Vanilla JavaScript (UI/UX Pro Max Edition)
  * Комментарии на русском для разработчиков.
  */
 
